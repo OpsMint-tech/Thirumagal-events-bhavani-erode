@@ -14,9 +14,6 @@ const EventTypes = () => {
                     <div className="event-images">
                         <div className="image-wrapper play-wrapper">
                             <img src={coupleImg} alt="Wedding Couple" className="event-img main-img" />
-                            <div className="play-button">
-                                <span className="material-symbols-outlined">play_arrow</span>
-                            </div>
                         </div>
                         <div className="image-wrapper">
                             <img src={cakeImg} alt="Wedding Cake" className="event-img secondary-img" />

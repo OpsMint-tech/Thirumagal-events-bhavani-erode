@@ -57,26 +57,18 @@ const Gallery = () => {
     const [visibleCount, setVisibleCount] = useState(8);
 
     const portfolioItems = [
-        
-        { id: 2, img: gallery2, category: 'engagement' },
-        
+
         { id: 4, img: gallery4, category: 'birthday' },
-        
-        { id: 6, img: decorBirthday, category: 'birthday' },
-        
-        
+
+
         { id: 10, img: eventCouple, category: 'wedding' },
-        
-        
         { id: 14, img: decorGarland, category: 'wedding' },
         { id: 15, img: decorPuberty, category: 'event' },
-        
+
         { id: 17, img: service1, category: 'wedding' },
-        
+
         { id: 21, img: weddingImg1, category: 'wedding' },
         { id: 22, img: weddingImg2, category: 'wedding' },
-        { id: 23, img: weddingImg3, category: 'wedding' },
-        { id: 24, img: weddingImg4, category: 'wedding' },
         { id: 25, img: weddingImg5, category: 'wedding' },
         { id: 26, img: engagementImg1, category: 'stage decoration' },
         { id: 27, img: engagementImg2, category: 'stage decoration' },
@@ -90,11 +82,10 @@ const Gallery = () => {
         { id: 34, img: engagementImg9, category: 'stage decoration' },
         { id: 35, img: engagementImg10, category: 'stage decoration' },
         { id: 36, img: engagementImg11, category: 'stage decoration' },
-        
-        { id: 37, img: birthdayImg1, category: 'birthday' },
+
         { id: 38, img: birthdayImg2, category: 'birthday' },
         { id: 39, img: birthdayImg3, category: 'birthday' },
-        
+
     ];
 
     const categories = [
@@ -102,7 +93,7 @@ const Gallery = () => {
         { id: 'wedding', label: t('gallery.filter.wedding') || 'Wedding' },
         { id: 'stage decoration', label: t('gallery.filter.engagement') || 'stage decoration' },
         { id: 'birthday', label: t('gallery.filter.birthday') || 'Birthday' },
-        
+
     ];
 
     const filteredItems = filter === 'all'
@@ -151,7 +142,6 @@ const Gallery = () => {
                             <img src={item.img} alt={`Gallery ${item.id}`} loading="lazy" />
                             <div className="gallery-overlay">
                                 <span className="category-label">{item.category}</span>
-                                <span className="material-symbols-outlined">zoom_in</span>
                             </div>
                         </div>
                     ))}
@@ -164,7 +154,7 @@ const Gallery = () => {
                                 {t('gallery.viewMore') || 'View More'}
                                 <span className="material-symbols-outlined">expand_more</span>
                             </button>
-                            
+
                         </>
                     )}
                     {visibleCount > 8 && (

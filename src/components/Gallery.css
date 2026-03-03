@@ -8,6 +8,17 @@
     margin-bottom: 40px;
 }
 
+.gallery-header .section-subtitle-center {
+    color: var(--color-primary) !important;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.gallery-header .section-title-center {
+    color: var(--color-primary) !important;
+}
+
 .gallery-filters {
     display: flex;
     justify-content: center;

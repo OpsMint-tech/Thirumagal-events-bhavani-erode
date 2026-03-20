@@ -37,7 +37,7 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync ./dist/public/ s3://kerbha-site/ \
+          aws s3 sync ./dist s3://kerbha-site/ \
             --delete \
             --exclude ".DS_Store"
 

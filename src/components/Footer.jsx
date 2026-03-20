@@ -54,6 +54,7 @@ const Footer = () => {
 
                 <div className="footer-bottom">
                     <p>&copy; {new Date().getFullYear()} Thirumagal Decor & Events. {t('footer.rights')}</p>
+                    <p className="powered-by">Powered by <a href="https://opsmintech.com/" target="_blank" rel="noopener noreferrer">opsmintech.com</a></p>
                 </div>
             </div>
         </footer>

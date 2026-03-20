@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 100;
     padding: 15px 40px;
     background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
@@ -26,18 +26,18 @@
 
 .logo-img {
     height: 70px;
-    /* Adjusted for better visibility */
     width: auto;
     object-fit: contain;
 }
 
-.navbar-links {
+/* Desktop Navigation Links */
+.navbar-links-desktop {
     display: flex;
     list-style: none;
     gap: 30px;
 }
 
-.navbar-links a {
+.navbar-links-desktop a {
     color: var(--color-text-white);
     font-size: 0.85rem;
     font-weight: 600;
@@ -47,46 +47,13 @@
     font-family: var(--font-main);
 }
 
-.navbar-links a:hover {
+.navbar-links-desktop a:hover {
     color: var(--color-primary);
 }
 
-.navbar-icons {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    color: var(--color-text-white);
-}
-
-.icon-btn {
-    color: var(--color-text-white);
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.icon-btn:hover {
-    transform: scale(1.1);
-    color: var(--color-primary);
-}
-
-.badge {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    background-color: var(--color-primary);
-    color: white;
-    font-size: 10px;
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
+/* Mobile Navigation Links - OUTSIDE the navbar to bypass backdrop-filter */
+.navbar-links-mobile {
+    display: none; /* Hidden by default, only shown on mobile */
 }
 
 .navbar-controls {
@@ -125,46 +92,76 @@
     font-size: 2rem;
 }
 
+/* ===== MOBILE STYLES ===== */
 @media (max-width: 900px) {
     .navbar {
         padding: 10px 20px;
+    }
+
+    /* Hide desktop links on mobile */
+    .navbar-links-desktop {
+        display: none;
     }
 
     .mobile-menu-btn {
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 1100;
-        /* Ensure it's above the menu overlay */
-        position: relative;
+        padding: 5px;
     }
 
     .mobile-menu-btn.active {
         color: var(--color-primary);
-        /* Make it stand out when menu is open */
     }
 
-    .navbar-links {
+    /* Mobile fullscreen menu - lives OUTSIDE nav so backdrop-filter doesn't break position:fixed */
+    .navbar-links-mobile {
+        display: flex;
         position: fixed;
         top: 0;
-        right: -100%;
-        width: 70%;
+        left: 0;
+        width: 100%;
         height: 100vh;
-        background: rgba(0, 0, 0, 0.95);
-        backdrop-filter: blur(15px);
+        background: #111111;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 40px;
-        transition: right 0.4s ease;
-        z-index: 999;
+        gap: 25px;
+        z-index: 99; /* Below navbar (100) so navbar bar stays on top */
+        transform: translateX(100%);
+        transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
 
-    .navbar-links.active {
-        right: 0;
+    .navbar-links-mobile.active {
+        transform: translateX(0);
     }
 
-    .navbar-links a {
-        font-size: 1.2rem;
+    .navbar-links-mobile a {
+        color: #fff;
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding: 12px 0;
+        text-transform: uppercase;
+        font-family: var(--font-main);
+        transition: color 0.3s ease;
+    }
+
+    .navbar-links-mobile a:hover {
+        color: var(--color-primary);
+    }
+
+    .navbar-links-mobile li {
+        width: 80%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 5px 0;
+    }
+
+    .navbar-links-mobile li:last-child {
+        border-bottom: none;
     }
 }

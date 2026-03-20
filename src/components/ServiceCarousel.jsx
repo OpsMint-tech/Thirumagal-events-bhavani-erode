@@ -70,7 +70,7 @@ const ServiceCarousel = () => {
                         {services.map((service, index) => (
                             <div key={index} className="service-card-v2">
                                 <div className="card-image">
-                                    <img src={service.image} alt={service.title} />
+                                    <img src={service.image} alt={service.title} loading="lazy" />
                                     <div className="card-price-tag">{service.price}</div>
                                 </div>
                                 <div className="card-content">

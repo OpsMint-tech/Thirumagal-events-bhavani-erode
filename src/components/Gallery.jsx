@@ -3,14 +3,14 @@ import './Gallery.css';
 // import eventCouple from '../assets/event-couple.jpg';
 // import decorGarland from '../assets/decor-garland.jpg';
 // import decorPuberty from '../assets/decor-puberty.jpg';
-import weds01 from '../assets/Weds01.jpg';
+import weds01 from '../assets/Weds01.webp';
 import weds02 from '../assets/weds02.webp';
 import floral01 from '../assets/floral decor01.webp';
 import floral02 from '../assets/Floral decor02.webp';
 import floral04 from '../assets/floral decor04.webp';
 import floral05 from '../assets/floral decor05.webp';
 import floral06 from '../assets/floral decor06.webp';
-import wed03 from '../assets/wed03.jpg';
+import wed03 from '../assets/wed03.webp';
 
 
 import stage01 from '../assets/Stage01.webp';
@@ -134,7 +134,7 @@ const Gallery = () => {
             if (!isScrollingRef.current) {
                 setShuffledItems(prev => shuffleArray(prev));
             }
-        }, 2000);
+        }, 3000);
 
         return () => clearInterval(intervalId);
         // eslint-disable-next-line react-hooks/exhaustive-deps

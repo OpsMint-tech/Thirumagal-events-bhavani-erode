@@ -11,7 +11,7 @@ const AboutUs = () => {
             <div className="container">
                 <div className="about-us-grid">
                     <div className="about-image-col">
-                        <img src={brideImg} alt="Bride in floral arch" className="about-img" />
+                        <img src={brideImg} alt="Bride in floral arch" className="about-img" loading="lazy" />
                     </div>
                     <div className="about-content-col">
                         <span className="section-subtitle">{t('about.subtitle')}</span>

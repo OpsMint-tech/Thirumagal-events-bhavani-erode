@@ -1,17 +1,26 @@
-import Hero from './components/Hero';
+import React, { Suspense, lazy } from 'react';
 import Navbar from './components/Navbar';
+import Hero from './components/Hero';
 import EventTypes from './components/EventTypes';
 import Services from './components/Services';
-import AboutUs from './components/AboutUs';
-import ServiceCarousel from './components/ServiceCarousel';
-import CTA from './components/CTA';
-import Pricing from './components/Pricing';
-import Gallery from './components/Gallery';
-import FAQ from './components/FAQ';
-import Testimonials from './components/Testimonials';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
+
+// Lazy load components below the fold
+const ServiceCarousel = lazy(() => import('./components/ServiceCarousel'));
+const CTA = lazy(() => import('./components/CTA'));
+const AboutUs = lazy(() => import('./components/AboutUs'));
+const Gallery = lazy(() => import('./components/Gallery'));
+const FAQ = lazy(() => import('./components/FAQ'));
+const Testimonials = lazy(() => import('./components/Testimonials'));
+const Pricing = lazy(() => import('./components/Pricing'));
+const Contact = lazy(() => import('./components/Contact'));
+const Footer = lazy(() => import('./components/Footer'));
+
+const LoadingFallback = () => (
+  <div style={{ height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#13B5A1' }}>
+    <div className="loading-spinner">Loading...</div>
+  </div>
+);
 
 function App() {
   return (
@@ -20,14 +29,17 @@ function App() {
       <Hero />
       <EventTypes />
       <Services />
-      <ServiceCarousel />
-      <CTA />
-      <AboutUs />
-      <Gallery />
-      <FAQ />
-      <Testimonials />
-      <Contact />
-      <Footer />
+      <Suspense fallback={<LoadingFallback />}>
+        <ServiceCarousel />
+        <CTA />
+        <AboutUs />
+        <Gallery />
+        <FAQ />
+        <Testimonials />
+        <Pricing />
+        <Contact />
+        <Footer />
+      </Suspense>
       <FloatingButtons />
     </>
   )

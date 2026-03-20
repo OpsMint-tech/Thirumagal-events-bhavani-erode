@@ -1,7 +1,7 @@
 import React from 'react';
 import './EventTypes.css';
 import coupleImg from '../assets/engagement01.webp';
-import cakeImg from '../assets/floral decor0401.jpg';
+import cakeImg from '../assets/floral decor0401.webp';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const EventTypes = () => {
@@ -13,10 +13,10 @@ const EventTypes = () => {
                 <div className="event-types-grid">
                     <div className="event-images">
                         <div className="image-wrapper play-wrapper">
-                            <img src={coupleImg} alt="Wedding Couple" className="event-img main-img" />
+                            <img src={coupleImg} alt="Wedding Couple" className="event-img main-img" loading="lazy" />
                         </div>
                         <div className="image-wrapper">
-                            <img src={cakeImg} alt="Wedding Cake" className="event-img secondary-img" />
+                            <img src={cakeImg} alt="Wedding Cake" className="event-img secondary-img" loading="lazy" />
                         </div>
                     </div>
 

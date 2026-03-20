@@ -4,7 +4,7 @@ import './Services.css';
 import service1 from '../assets/floral decor01.webp';
 import service2 from '../assets/Entertainemnt 01.webp';
 import service3 from '../assets/Catering03.webp';
-import service4 from '../assets/wed03.jpg';
+import service4 from '../assets/wed03.webp';
 import logoImg from '../assets/logo.png';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -44,7 +44,7 @@ const Services = () => {
                 {servicesSet.map((service) => (
                     <div key={service.id} className="service-card">
                         <div className="service-img-wrapper">
-                            <img src={service.image} alt={service.title} />
+                            <img src={service.image} alt={service.title} loading="lazy" />
                             <div className="service-overlay"></div>
                         </div>
                         <div className="service-content">

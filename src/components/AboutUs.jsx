@@ -1,6 +1,6 @@
 import React from 'react';
 import './AboutUs.css';
-import brideImg from '../assets/about-bride.jpg';
+import brideImg from '../assets/About01.webp';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const AboutUs = () => {

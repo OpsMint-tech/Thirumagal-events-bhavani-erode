@@ -1,7 +1,7 @@
 import React from 'react';
 import './EventTypes.css';
-import coupleImg from '../assets/event-couple.jpg';
-import cakeImg from '../assets/event-cake.jpg';
+import coupleImg from '../assets/engagement01.webp';
+import cakeImg from '../assets/floral decor0401.jpg';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const EventTypes = () => {

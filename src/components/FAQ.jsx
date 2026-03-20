@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './FAQ.css';
-import faqImg from '../assets/faq-bride.jpg';
+import faqImg from '../assets/floral decor05.webp';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const FAQ = () => {

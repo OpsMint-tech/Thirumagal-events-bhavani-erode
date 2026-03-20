@@ -1,10 +1,10 @@
 import React from 'react';
 import './Services.css';
 
-import service1 from '../assets/service-1.jpg';
-import service2 from '../assets/service-2.jpg';
-import service3 from '../assets/service-3.jpg';
-import service4 from '../assets/service-4.jpg';
+import service1 from '../assets/floral decor01.webp';
+import service2 from '../assets/Entertainemnt 01.webp';
+import service3 from '../assets/Catering03.webp';
+import service4 from '../assets/wed03.jpg';
 import logoImg from '../assets/logo.png';
 import { useLanguage } from '../contexts/LanguageContext';
 

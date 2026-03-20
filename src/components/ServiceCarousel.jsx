@@ -1,15 +1,11 @@
 import React from 'react';
 import './ServiceCarousel.css';
-import birthdayImg from '../assets/decor-birthday.jpg';
-import weddingImg from '../assets/decor-wedding.jpg';
-import stageImg from '../assets/decor-stage.jpg';
-import entranceImg from '../assets/decor-entrance.jpg';
-import engagementImg from '../assets/decor-engagement.jpg';
-import housewarmingImg from '../assets/decor-housewarming.jpg';
-import pubertyImg from '../assets/decor-puberty.jpg';
-import balloonImg from '../assets/decor-balloon.jpg';
-import corporateImg from '../assets/decor-corporate.jpg';
-import garlandImg from '../assets/decor-garland.jpg';
+import birthdayImg from '../assets/Bday01.webp';
+import weddingImg from '../assets/Reception01.webp';
+import stageImg from '../assets/Stage18.webp';
+import entranceImg from '../assets/Enter01.webp';
+import engagementImg from '../assets/engagement01.webp';
+import balloonImg from '../assets/Balloon01.webp';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const ServiceCarousel = () => {
@@ -52,40 +48,12 @@ const ServiceCarousel = () => {
             image: engagementImg
         },
         {
-            title: t('carousel.items.housewarming.title'),
-            price: "₹12,000 - ₹25,000",
-            unit: t('carousel.unit'),
-            description: t('carousel.items.housewarming.desc'),
-            image: housewarmingImg
-        },
-        {
-            title: t('carousel.items.puberty.title'),
-            price: "₹15,000 - ₹30,000",
-            unit: t('carousel.unit'),
-            description: t('carousel.items.puberty.desc'),
-            image: pubertyImg
-        },
-        {
             title: t('carousel.items.balloon.title'),
             price: "₹5,000 - ₹12,000",
             unit: t('carousel.unit'),
             description: t('carousel.items.balloon.desc'),
             image: balloonImg
         },
-        {
-            title: t('carousel.items.corporate.title'),
-            price: "₹30,000 - ₹80,000",
-            unit: t('carousel.unit'),
-            description: t('carousel.items.corporate.desc'),
-            image: corporateImg
-        },
-        {
-            title: t('carousel.items.pool.title'),
-            price: "₹20,000 - ₹40,000",
-            unit: t('carousel.unit'),
-            description: t('carousel.items.pool.desc'),
-            image: garlandImg
-        }
     ];
 
     return (

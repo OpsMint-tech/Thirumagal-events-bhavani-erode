@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navbar.css';
 import logoImg from '../assets/logo.png';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -6,6 +6,15 @@ import { useLanguage } from '../contexts/LanguageContext';
 const Navbar = () => {
   const { language, t, toggleLanguage } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -16,59 +25,70 @@ const Navbar = () => {
   };
 
   // Prevent scrolling when menu is open
-  React.useEffect(() => {
+  useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'unset';
     }
-    return () => {
-      document.body.style.overflow = 'unset';
-    };
   }, [isMenuOpen]);
+
+  const navLinks = [
+    { href: '#home', label: t('nav.home') },
+    { href: '#services', label: t('nav.services') },
+    { href: '#why-us', label: t('nav.whyUs') },
+    { href: '#gallery', label: t('nav.gallery') },
+    { href: '#testimonials', label: t('nav.reviews') },
+    { href: '#faq', label: t('nav.faq') },
+    { href: '#contact', label: t('nav.bookNow') },
+  ];
 
   return (
     <>
-      <nav className="navbar">
-        <div className="navbar-container">
+      <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+        <div className="container navbar-container">
           <div className="navbar-logo">
             <a href="#home" onClick={closeMenu}>
               <img src={logoImg} alt="Thirumagal Logo" className="logo-img" />
+              <span className="logo-text">Thirumagal</span>
             </a>
           </div>
 
-          {/* Desktop links - hidden on mobile via CSS */}
           <ul className="navbar-links-desktop">
-            <li><a href="#home">{t('nav.home')}</a></li>
-            <li><a href="#about">{t('nav.about')}</a></li>
-            <li><a href="#services">{t('nav.services')}</a></li>
-            <li><a href="#shop">{t('nav.decorations')}</a></li>
-            <li><a href="#portfolio">{t('nav.portfolio')}</a></li>
-            <li><a href="#contact">{t('nav.contact')}</a></li>
+            {navLinks.slice(0, 6).map((link) => (
+              <li key={link.href}><a href={link.href}>{link.label}</a></li>
+            ))}
           </ul>
 
-          <div className="navbar-controls">
-            <button className="lang-toggle" onClick={toggleLanguage}>
-              {language === 'en' ? 'தமிழ்' : 'English'}
+          <div className="navbar-cta">
+            <button className="tamil-btn" onClick={toggleLanguage}>
+              {language === 'en' ? 'TAMIL' : 'ENGLISH'}
             </button>
+            <a href="#contact" className="btn btn-primary nav-btn">{t('nav.bookNow')}</a>
+          </div>
 
-            <button className={`mobile-menu-btn ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
-              <span className="material-symbols-outlined">
-                {isMenuOpen ? 'close' : 'menu'}
-              </span>
+          <div className="navbar-controls">
+            <button className={`mobile-menu-btn ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu} aria-label="Toggle Menu">
+              <span className="bar"></span>
+              <span className="bar"></span>
+              <span className="bar"></span>
             </button>
           </div>
         </div>
       </nav>
 
-      {/* Mobile menu - OUTSIDE nav to avoid backdrop-filter containing block issue */}
+      <div className={`mobile-overlay ${isMenuOpen ? 'active' : ''}`} onClick={closeMenu}></div>
       <ul className={`navbar-links-mobile ${isMenuOpen ? 'active' : ''}`}>
-        <li><a href="#home" onClick={closeMenu}>{t('nav.home')}</a></li>
-        <li><a href="#about" onClick={closeMenu}>{t('nav.about')}</a></li>
-        <li><a href="#services" onClick={closeMenu}>{t('nav.services')}</a></li>
-        <li><a href="#shop" onClick={closeMenu}>{t('nav.decorations')}</a></li>
-        <li><a href="#portfolio" onClick={closeMenu}>{t('nav.portfolio')}</a></li>
-        <li><a href="#contact" onClick={closeMenu}>{t('nav.contact')}</a></li>
+        {navLinks.map((link) => (
+          <li key={link.href}>
+            <a href={link.href} onClick={closeMenu}>{link.label}</a>
+          </li>
+        ))}
+        <li>
+          <button className="lang-toggle-mobile" onClick={() => { toggleLanguage(); closeMenu(); }}>
+            {language === 'en' ? 'தமிழ்' : 'English'}
+          </button>
+        </li>
       </ul>
     </>
   );

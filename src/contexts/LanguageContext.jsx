@@ -4,7 +4,10 @@ import { translations } from '../translations';
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-    const [language, setLanguage] = useState('en'); // 'en' or 'ta'
+    // Check localStorage for saved language preference
+    const [language, setLanguage] = useState(() => {
+        return localStorage.getItem('site_language') || 'en';
+    });
 
     const t = (path) => {
         const keys = path.split('.');
@@ -14,14 +17,16 @@ export const LanguageProvider = ({ children }) => {
             if (result && result[key]) {
                 result = result[key];
             } else {
-                return path; // Fallback to path string if not found
+                return path; 
             }
         }
         return result;
     };
 
     const toggleLanguage = () => {
-        setLanguage(prev => prev === 'en' ? 'ta' : 'en');
+        const newLang = language === 'en' ? 'ta' : 'en';
+        setLanguage(newLang);
+        localStorage.setItem('site_language', newLang);
     };
 
     return (

@@ -28,7 +28,7 @@
 }
 
 .phone-btn {
-    background-color: var(--primary-color, #008e85);
+    background-color: var(--color-gold);
 }
 
 .floating-btn:hover {

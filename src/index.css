@@ -1,3 +1,23 @@
+:root {
+  --color-gold: #c9972c;
+  --color-gold-light: #e0b04d;
+  --color-gold-dark: #a67c22;
+  --color-ivory: #faf9f6;
+  --color-charcoal: #121212;
+  --color-charcoal-light: #1e1e1e;
+  --color-text-dark: #121212;
+  --color-text-white: #ffffff;
+  --color-text-gray: #b0b0b0;
+  
+  --font-main: 'Outfit', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  
+  --section-padding: 100px 5%;
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
 @media (max-width: 768px) {
   :root {
     --section-padding: 60px 20px;
@@ -8,21 +28,6 @@ html {
   scroll-behavior: smooth;
 }
 
-section {
-  scroll-margin-top: 80px;
-}
-
-:root {
-  --color-primary: #13B5A1;
-  --color-primary-hover: #0e8c7c;
-  --color-text-white: #ffffff;
-  --color-text-gray: #e5e5e5;
-  --font-main: 'Outfit', sans-serif;
-  --font-serif: 'Playfair Display', serif;
-  --bg-dark-overlay: rgba(0, 0, 0, 0.5);
-  --header-height: 80px;
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -31,70 +36,133 @@ section {
 
 body {
   font-family: var(--font-main);
-  background-color: #000;
-  color: var(--color-text-white);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-ivory);
+  color: var(--color-text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: var(--font-serif);
+  font-weight: 600;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  transition: var(--transition);
 }
 
-button {
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button, .btn {
   cursor: pointer;
-  border: none;
-  background: none;
-  font-family: inherit;
+  font-family: var(--font-main);
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
 }
 
-/* Header Helpers */
-.section-title,
-.section-title-center {
-  color: #000;
-  font-family: 'Oswald', sans-serif;
+.btn-primary {
+  background-color: var(--color-gold);
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-gold-dark);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-gold);
+  border: 2px solid var(--color-gold);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-gold);
+  color: white;
+}
+
+.btn-dark {
+  background-color: var(--color-charcoal);
+  color: white;
+  border: none;
+}
+
+.btn-whatsapp {
+  background-color: #25d366;
+  color: white;
+  border: none;
+}
+
+/* Section Layouts */
+section {
+  padding: var(--section-padding);
+}
+
+.section-head {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.section-label {
+  color: var(--color-gold);
   text-transform: uppercase;
-  margin-bottom: 20px;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .section-title {
-  font-size: 3rem;
-  font-weight: 800;
-}
-
-.section-title-center {
   font-size: 2.5rem;
-  font-weight: 800;
-  text-align: center;
-}
-
-.section-subtitle,
-.section-subtitle-center {
-  color: var(--color-primary);
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-size: 0.9rem;
-  display: block;
+  color: var(--color-charcoal);
+  position: relative;
+  display: inline-block;
   margin-bottom: 20px;
-  text-transform: uppercase;
 }
 
-.section-subtitle-center {
-  text-align: center;
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
 }
 
-.section-description {
-  color: #444;
-  font-size: 1.1rem;
-  line-height: 1.6;
+.grid {
+  display: grid;
+  gap: 30px;
 }
 
-/* Material Icons Helper */
-.material-symbols-outlined {
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

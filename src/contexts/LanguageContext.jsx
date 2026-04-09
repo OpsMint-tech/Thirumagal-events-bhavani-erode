@@ -14,7 +14,7 @@ export const LanguageProvider = ({ children }) => {
         let result = translations[language];
 
         for (const key of keys) {
-            if (result && result[key]) {
+            if (result && result[key] !== undefined) {
                 result = result[key];
             } else {
                 return path; 

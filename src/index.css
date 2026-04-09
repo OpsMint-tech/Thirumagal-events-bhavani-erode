@@ -1,8 +1,8 @@
 :root {
-  --color-gold: #c9972c;
-  --color-gold-light: #e0b04d;
-  --color-gold-dark: #a67c22;
-  --color-ivory: #faf9f6;
+  --color-gold: #04a598;
+  --color-gold-light: #3bc5bc;
+  --color-gold-dark: #027b71;
+  --color-ivory: #ffffff;
   --color-charcoal: #121212;
   --color-charcoal-light: #1e1e1e;
   --color-text-dark: #121212;
@@ -137,7 +137,7 @@ section {
   font-size: 2.5rem;
   color: var(--color-charcoal);
   position: relative;
-  display: inline-block;
+  display: block;
   margin-bottom: 20px;
 }
 
@@ -145,6 +145,17 @@ section {
   .section-title {
     font-size: 2rem;
   }
+}
+
+/* Global Tamil language overrides */
+[data-lang="ta"] .section-title {
+  font-size: 2rem;
+  line-height: 1.4;
+}
+
+[data-lang="ta"] .section-label {
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
 }
 
 .grid {

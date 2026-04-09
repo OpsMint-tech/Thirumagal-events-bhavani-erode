@@ -152,3 +152,19 @@
         padding: 30px 20px;
     }
 }
+
+/* Tamil language overrides */
+[data-lang="ta"] .section-title-center {
+    font-size: 1.7rem;
+    line-height: 1.4;
+}
+
+[data-lang="ta"] .section-subtitle-center {
+    letter-spacing: 0;
+    font-size: 0.8rem;
+}
+
+[data-lang="ta"] .plan-title {
+    font-size: 0.75rem;
+    font-family: var(--font-main);
+}

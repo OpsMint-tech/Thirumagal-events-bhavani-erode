@@ -61,3 +61,24 @@
         justify-content: center;
     }
 }
+
+/* Tamil language overrides */
+[data-lang="ta"] .cta-title {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+@media (max-width: 1024px) {
+    [data-lang="ta"] .cta-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    [data-lang="ta"] .cta-btn {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+}

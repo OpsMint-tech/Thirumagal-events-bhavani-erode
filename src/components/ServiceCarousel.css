@@ -91,7 +91,6 @@
     font-weight: 700;
     color: #111;
     margin-bottom: 5px;
-    text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
 }
 
@@ -109,13 +108,25 @@
     color: #555;
     line-height: 1.6;
     margin-bottom: 30px;
-    height: 75px;
-    /* Fixed height for text consistency */
+    min-height: 75px;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
     line-clamp: 3;
     -webkit-box-orient: vertical;
+}
+
+/* Tamil language overrides */
+[data-lang="ta"] .card-title {
+    font-size: 1.05rem;
+    font-family: var(--font-main);
+}
+
+[data-lang="ta"] .card-text {
+    font-size: 0.88rem;
+    min-height: 90px;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
 }
 
 .btn-text {

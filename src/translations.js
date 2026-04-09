@@ -99,11 +99,51 @@ export const translations = {
       }
     },
     footer: {
-      tagline: "Since 1991 — Erode's most trusted event decorators for over 35 years.",
+      tagline: "Since 1991 \u2014 Erode's most trusted event decorators for over 35 years.",
       contactTitle: "Contact Details",
       linksTitle: "Quick Links",
       rights: "All rights reserved.",
       powered: "Designed with ❤️ by "
+    },
+    eventTypes: {
+      subtitle: "Our Speciality",
+      title: "Weddings, Receptions & More",
+      desc: "We bring artistry and elegance to every event — from intimate engagements to grand wedding ceremonies.",
+      feature1: "Grand Wedding Stage Setups",
+      feature2: "Premium Floral Decorations",
+      feature3: "Professional Event Management",
+      btn: "Book Your Event",
+      servicesHeader: "Our Services",
+      servicesTitle: "Premium Decoration for Every Occasion"
+    },
+    carousel: {
+      subtitle: "Our Packages",
+      title: "Decoration Services & Pricing",
+      desc: "Transparent pricing for every event type. All packages are fully customisable.",
+      unit: "Per Event",
+      bookBtn: "Book Now",
+      items: {
+        birthday: { title: "Birthday Decoration", desc: "Creative balloon & floral setups for birthday celebrations of all ages." },
+        wedding: { title: "Wedding Decoration", desc: "Grand stage setups and floral arrangements for your most special day." },
+        stage: { title: "Stage Decoration", desc: "Premium stage backdrops with lighting and flower arrangements." },
+        entrance: { title: "Entrance Decoration", desc: "Beautiful entrance arches and floral corridors to welcome your guests." },
+        engagement: { title: "Engagement Decoration", desc: "Elegant and romantic setups for your engagement ceremony." },
+        balloon: { title: "Balloon Decoration", desc: "Colourful balloon sculptures, arches, and photo-booth setups." }
+      }
+    },
+    pricing: {
+      subtitle: "Pricing Plans",
+      title: "Choose the Right Package",
+      starting: "Starting from",
+      label: "What's Included:",
+      btn: "Book This Plan",
+      p1: { title: "Full Planning", desc: "Complete end-to-end event planning and decoration service." },
+      p2: { title: "Partial Planning", desc: "We handle key parts of your event while you manage the rest." },
+      p3: { title: "Day-Of Service", desc: "We coordinate everything on your event day for a stress-free experience." }
+    },
+    cta: {
+      title: "Ready to Make Your Event Unforgettable?",
+      btn: "Book a Free Consultation"
     }
   },
   ta: {
@@ -206,11 +246,51 @@ export const translations = {
       }
     },
     footer: {
-      tagline: "1991 முதல் — 35 ஆண்டுகளுக்கும் மேலாக ஈரோட்டின் மிகவும் நம்பகமான நிகழ்வு அலங்கார நிபுணர்கள்.",
+      tagline: "1991 முதல் \u2014 35 ஆண்டுகளுக்கும் மேலாக ஈரோட்டின் மிகவும் நம்பகமான நிகழ்வு அலங்கார நிபுணர்கள்.",
       contactTitle: "தொடர்பு விவரங்கள்",
       linksTitle: "விரைவான இணைப்புகள்",
       rights: "அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை.",
       powered: "❤️ உடன் வடிவமைத்தவர்கள் "
+    },
+    eventTypes: {
+      subtitle: "எங்கள் சிறப்பு",
+      title: "திருமணங்கள், வரவேற்புகள் & மேலும்",
+      desc: "நெருங்கிய நிச்சயதார்த்தங்கள் முதல் பிரமாண்டமான திருமண விழாக்கள் வரை ஒவ்வொரு நிகழ்வுக்கும் அழகியல் மற்றும் நேர்த்தி தருகிறோம்.",
+      feature1: "பிரமாண்டமான திருமண மேடை அமைப்புகள்",
+      feature2: "பிரீமியம் மலர் அலங்காரங்கள்",
+      feature3: "தொழில்முறை நிகழ்வு மேலாண்மை",
+      btn: "நிகழ்வை முன்பதிவு செய்யுங்கள்",
+      servicesHeader: "எங்கள் சேவைகள்",
+      servicesTitle: "ஒவ்வொரு சந்தர்ப்பத்திற்கும் பிரீமியம் அலங்காரம்"
+    },
+    carousel: {
+      subtitle: "எங்கள் திட்டங்கள்",
+      title: "அலங்காரச் சேவைகள் & விலை",
+      desc: "ஒவ்வொரு நிகழ்வு வகைக்கும் வெளிப்படையான விலை நிர்ணயம். அனைத்து திட்டங்களும் முழுமையாக தனிப்பயனாக்கலாம்.",
+      unit: "நிகழ்வுக்கு",
+      bookBtn: "முன்பதிவு செய்யுங்கள்",
+      items: {
+        birthday: { title: "பிறந்தநாள் அலங்காரம்", desc: "அனைத்து வயதினரின் பிறந்தநாள் கொண்டாட்டங்களுக்கு ஆக்கப்பூர்வமான பலூன் மற்றும் மலர் அமைப்புகள்." },
+        wedding: { title: "திருமண அலங்காரம்", desc: "உங்கள் மிக சிறப்பான நாளுக்கான பிரமாண்டமான மேடை அமைப்புகள் மற்றும் மலர் ஏற்பாடுகள்." },
+        stage: { title: "மேடை அலங்காரம்", desc: "விளக்குகள் மற்றும் மலர் ஏற்பாடுகளுடன் பிரீமியம் மேடை பின்னணிகள்." },
+        entrance: { title: "நுழைவாயில் அலங்காரம்", desc: "உங்கள் விருந்தினர்களை வரவேற்க அழகான நுழைவாயில் வளைவுகள் மற்றும் மலர் சுரங்கங்கள்." },
+        engagement: { title: "நிச்சயதார்த்த அலங்காரம்", desc: "உங்கள் நிச்சயதார்த்த விழாவிற்கு நேர்த்தியான மற்றும் ரோமாந்தமான அமைப்புகள்." },
+        balloon: { title: "பலூன் அலங்காரம்", desc: "வண்ணமயமான பலூன் சிற்பங்கள், வளைவுகள் மற்றும் போட்டோ-பூத் அமைப்புகள்." }
+      }
+    },
+    pricing: {
+      subtitle: "விலை திட்டங்கள்",
+      title: "சரியான திட்டத்தைத் தேர்ந்தெடுங்கள்",
+      starting: "தொடங்கும் விலை",
+      label: "என்ன சேர்க்கப்பட்டுள்ளது:",
+      btn: "இந்த திட்டத்தை முன்பதிவு செய்யுங்கள்",
+      p1: { title: "முழு திட்டமிடல்", desc: "முழுமையான நிகழ்வு திட்டமிடல் மற்றும் அலங்காரச் சேவை." },
+      p2: { title: "பகுதி திட்டமிடல்", desc: "நீங்கள் மீதியை நிர்வகிக்கும் போது நாங்கள் முக்கிய பகுதிகளை கையாளுகிறோம்." },
+      p3: { title: "நிகழ்வு நாள் சேவை", desc: "அழுத்தமற்ற அனுபவத்திற்காக உங்கள் நிகழ்வு நாளில் எல்லாவற்றையும் ஒருங்கிணைக்கிறோம்." }
+    },
+    cta: {
+      title: "உங்கள் நிகழ்வை மறக்கமுடியாததாக மாற்ற தயாரா?",
+      btn: "இலவச ஆலோசனையை முன்பதிவு செய்யுங்கள்"
     }
   }
 };

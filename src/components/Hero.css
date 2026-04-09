@@ -102,4 +102,27 @@
   .hero-actions {
     justify-content: center;
   }
+}
+
+/* Tamil language overrides */
+[data-lang="ta"] .hero-title {
+  font-size: 2.8rem;
+  line-height: 1.3;
+}
+
+[data-lang="ta"] .hero-subtext {
+  font-size: 1.05rem;
+  max-width: 640px;
+}
+
+@media (max-width: 1024px) {
+  [data-lang="ta"] .hero-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  [data-lang="ta"] .hero-title {
+    font-size: 1.8rem;
+  }
 }

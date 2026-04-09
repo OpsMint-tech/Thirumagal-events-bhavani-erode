@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, useEffect } from 'react';
 import { translations } from '../translations';
 
 const LanguageContext = createContext();
@@ -28,6 +28,11 @@ export const LanguageProvider = ({ children }) => {
         setLanguage(newLang);
         localStorage.setItem('site_language', newLang);
     };
+
+    // Sync language to body attribute for CSS targeting
+    useEffect(() => {
+        document.body.setAttribute('data-lang', language);
+    }, [language]);
 
     return (
         <LanguageContext.Provider value={{ language, t, toggleLanguage }}>

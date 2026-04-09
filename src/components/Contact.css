@@ -152,3 +152,34 @@
     padding: 30px 20px;
   }
 }
+
+.form-success-state {
+  text-align: center;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.form-success-state i {
+  font-size: 4rem;
+  color: #25d366;
+  margin-bottom: 10px;
+}
+
+.form-success-state h3 {
+  font-size: 1.8rem;
+  color: var(--color-charcoal);
+  margin: 0;
+}
+
+.form-success-state p {
+  color: var(--color-text-gray);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.form-success-state .btn {
+  margin-top: 10px;
+}

@@ -120,6 +120,9 @@ const Gallery = () => {
                 key={i} 
                 className={`dot ${i === currentPage ? 'active' : ''}`}
                 onClick={() => setCurrentPage(i)}
+                role="button"
+                aria-label={`Go to gallery page ${i + 1}`}
+                aria-current={i === currentPage ? 'page' : undefined}
               ></span>
             ))}
           </div>

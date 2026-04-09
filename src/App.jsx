@@ -14,8 +14,9 @@ const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
 
 const LoadingFallback = () => (
-  <div style={{ height: '100px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#c9972c' }}>
-    <div className="loading-spinner">Loading...</div>
+  <div className="loading-container">
+    <div className="loading-spinner"></div>
+    <div className="loading-text">Thirumagal</div>
   </div>
 );
 

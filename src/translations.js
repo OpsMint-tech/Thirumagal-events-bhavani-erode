@@ -19,6 +19,13 @@ export const translations = {
       ctaWhatsapp: "WhatsApp Us",
       ctaGallery: "View Our Work"
     },
+    about: {
+      subtitle: "About Our Legacy",
+      title: "35 Years of Crafting Beautiful Events",
+      desc1: "Established in 1991, Thirumagal Decors and Events has been the gold standard for event decoration in Bhavani and Erode. We specialize in turning your dream visions into reality with unmatched precision.",
+      desc2: "From grand traditional weddings to modern corporate setups, our team brings decades of experience and a passion for elegance to every project we undertake.",
+      btn: "Learn More About Us"
+    },
     trust: {
       experience: "35+ Years of Trust",
       events: "500+ Events Decorated",
@@ -95,7 +102,10 @@ export const translations = {
         call: "Call Us",
         whatsapp: "WhatsApp",
         visit: "Visit Our Office",
-        chat: "Chat on WhatsApp"
+        chat: "Chat on WhatsApp",
+        getDirections: "Get Directions",
+        successTitle: "Thank You!",
+        successMsg: "Your enquiry has been sent. Opening WhatsApp for chat..."
       }
     },
     footer: {
@@ -165,6 +175,13 @@ export const translations = {
       ctaCall: "அழைக்க",
       ctaWhatsapp: "வாட்ஸ்அப்",
       ctaGallery: "எங்கள் வேலைகளைப் பாருங்கள்"
+    },
+    about: {
+      subtitle: "எங்கள் பாரம்பரியம்",
+      title: "35 ஆண்டுகால அழகான நிகழ்வுகள்",
+      desc1: "1991 இல் நிறுவப்பட்ட திரு மகள் டெகர்ஸ் மற்றும் ஈவென்ட்ஸ் பவானி மற்றும் ஈரோட்டில் நிகழ்வு அலங்காரத்திற்கான சிறந்த அடையாளமாக உள்ளது. உங்கள் கனவு காட்சிகளை ஈடு இணையற்ற துல்லியத்துடன் நிஜமாக்குவதில் நாங்கள் நிபுணத்துவம் பெற்றுள்ளோம்.",
+      desc2: "பிரம்மாண்டமான பாரம்பரிய திருமணங்கள் முதல் நவீன கார்ப்பரேட் அமைப்புகள் வரை, எங்கள் குழு பல தசாப்தகால அனுபவத்தையும் நேர்த்திக்கான ஆர்வத்தையும் நாங்கள் மேற்கொள்ளும் ஒவ்வொரு திட்டத்திற்கும் கொண்டு வருகிறது.",
+      btn: "எங்களைப் பற்றி மேலும் அறிய"
     },
     trust: {
       experience: "35+ ஆண்டுகால நம்பிக்கை",
@@ -242,7 +259,10 @@ export const translations = {
         call: "அழைக்க",
         whatsapp: "வாட்ஸ்அப்",
         visit: "எங்கள் அலுவலகம்",
-        chat: "வாட்ஸ்அப்பில் சாட் செய்ய"
+        chat: "வாட்ஸ்அப்பில் சாட் செய்ய",
+        getDirections: "திசை அறிக்கை",
+        successTitle: "மிக்க நன்றி!",
+        successMsg: "உங்கள் விசாரணை அனுப்பப்பட்டது. வாட்ஸ்அப் பக்கம் திறக்கப்படும்..."
       }
     },
     footer: {

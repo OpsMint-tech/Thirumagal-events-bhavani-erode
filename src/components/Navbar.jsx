@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
-import logoImg from '../assets/logo.png';
+import logoImg from '../assets/logo.webp';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const Navbar = () => {
@@ -48,7 +48,7 @@ const Navbar = () => {
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="container navbar-container">
           <div className="navbar-logo">
-            <a href="#home" onClick={closeMenu}>
+            <a href="#home" onClick={closeMenu} aria-label="Go to homepage">
               <img src={logoImg} alt="Thirumagal Logo" className="logo-img" />
               <span className="logo-text">Thirumagal</span>
             </a>
@@ -56,15 +56,19 @@ const Navbar = () => {
 
           <ul className="navbar-links-desktop">
             {navLinks.slice(0, 6).map((link) => (
-              <li key={link.href}><a href={link.href}>{link.label}</a></li>
+              <li key={link.href}>
+                <a href={link.href} aria-label={`Navigate to ${link.label}`}>
+                  {link.label}
+                </a>
+              </li>
             ))}
           </ul>
 
           <div className="navbar-cta">
-            <button className="tamil-btn" onClick={toggleLanguage}>
+            <button className="tamil-btn" onClick={toggleLanguage} aria-label={`Switch language to ${language === 'en' ? 'Tamil' : 'English'}`}>
               {language === 'en' ? 'TAMIL' : 'ENGLISH'}
             </button>
-            <a href="#contact" className="btn btn-primary nav-btn">{t('nav.bookNow')}</a>
+            <a href="#contact" className="btn btn-primary nav-btn" aria-label={t('nav.bookNow')}>{t('nav.bookNow')}</a>
           </div>
 
           <div className="navbar-controls">

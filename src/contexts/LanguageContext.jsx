@@ -29,9 +29,10 @@ export const LanguageProvider = ({ children }) => {
         localStorage.setItem('site_language', newLang);
     };
 
-    // Sync language to body attribute for CSS targeting
+    // Sync language to body attribute and html lang for SEO/Accessibility
     useEffect(() => {
         document.body.setAttribute('data-lang', language);
+        document.documentElement.lang = language;
     }, [language]);
 
     return (

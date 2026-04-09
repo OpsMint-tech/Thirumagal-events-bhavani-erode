@@ -4,6 +4,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 
 const Contact = () => {
   const { t, language } = useLanguage();
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -19,7 +20,8 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Keep WhatsApp message in English as requested by user
+    
+    // Prepare WhatsApp message
     const whatsappMessage = `Hello, I would like to book a decoration.%0A%0A` +
       `*Name:* ${formData.name}%0A` +
       `*Phone:* ${formData.phone}%0A` +
@@ -28,7 +30,21 @@ const Contact = () => {
       `*Location:* ${formData.location}%0A` +
       `*Message:* ${formData.message}`;
     
+    // Open WhatsApp
     window.open(`https://wa.me/919842930758?text=${whatsappMessage}`, '_blank');
+    
+    // Set success state
+    setIsSubmitted(true);
+    
+    // Reset form
+    setFormData({
+      name: '',
+      phone: '',
+      eventType: '',
+      eventDate: '',
+      location: '',
+      message: ''
+    });
   };
 
   return (
@@ -41,49 +57,60 @@ const Contact = () => {
         
         <div className="contact-grid-new">
           <div className="contact-form-side fade-in">
-            <form className="booking-form" onSubmit={handleSubmit}>
-              <div className="form-row">
-                <div className="form-group">
-                  <label>{t('contact.form.name')}</label>
-                  <input type="text" name="name" required value={formData.name} onChange={handleChange} placeholder={t('contact.form.namePlh')} />
+            {!isSubmitted ? (
+              <form className="booking-form" onSubmit={handleSubmit}>
+                <div className="form-row">
+                  <div className="form-group">
+                    <label>{t('contact.form.name')}</label>
+                    <input type="text" name="name" required value={formData.name} onChange={handleChange} placeholder={t('contact.form.namePlh')} />
+                  </div>
+                  <div className="form-group">
+                    <label>{t('contact.form.phone')}</label>
+                    <input type="tel" name="phone" required value={formData.phone} onChange={handleChange} placeholder={t('contact.form.phonePlh')} />
+                  </div>
                 </div>
-                <div className="form-group">
-                  <label>{t('contact.form.phone')}</label>
-                  <input type="tel" name="phone" required value={formData.phone} onChange={handleChange} placeholder={t('contact.form.phonePlh')} />
+                
+                <div className="form-row">
+                  <div className="form-group">
+                    <label>{t('contact.form.eventType')}</label>
+                    <select name="eventType" required value={formData.eventType} onChange={handleChange}>
+                      <option value="">{t('contact.form.selectEvent')}</option>
+                      <option value="Wedding">Wedding</option>
+                      <option value="Reception">Reception</option>
+                      <option value="Birthday">Birthday</option>
+                      <option value="Engagement">Engagement</option>
+                      <option value="Corporate">Corporate</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div className="form-group">
+                    <label>{t('contact.form.eventDate')}</label>
+                    <input type="date" name="eventDate" required value={formData.eventDate} onChange={handleChange} />
+                  </div>
                 </div>
-              </div>
-              
-              <div className="form-row">
+                
                 <div className="form-group">
-                  <label>{t('contact.form.eventType')}</label>
-                  <select name="eventType" required value={formData.eventType} onChange={handleChange}>
-                    <option value="">{t('contact.form.selectEvent')}</option>
-                    <option value="Wedding">Wedding</option>
-                    <option value="Reception">Reception</option>
-                    <option value="Birthday">Birthday</option>
-                    <option value="Engagement">Engagement</option>
-                    <option value="Corporate">Corporate</option>
-                    <option value="Other">Other</option>
-                  </select>
+                  <label>{t('contact.form.location')}</label>
+                  <input type="text" name="location" required value={formData.location} onChange={handleChange} placeholder={t('contact.form.locPlh')} />
                 </div>
+                
                 <div className="form-group">
-                  <label>{t('contact.form.eventDate')}</label>
-                  <input type="date" name="eventDate" required value={formData.eventDate} onChange={handleChange} />
+                  <label>{t('contact.form.message')}</label>
+                  <textarea name="message" rows="4" value={formData.message} onChange={handleChange} placeholder={t('contact.form.msgPlh')}></textarea>
                 </div>
+                
+                <button type="submit" className="btn btn-primary w-100">{t('contact.form.submit')}</button>
+              </form>
+            ) : (
+              <div className="form-success-state fade-in">
+                <i className="fa-solid fa-circle-check"></i>
+                <h3>{t('contact.info.successTitle')}</h3>
+                <p>{t('contact.info.successMsg')}</p>
+                <button className="btn btn-outline" onClick={() => setIsSubmitted(false)}>
+                  {language === 'en' ? 'Send Another Inquiry' : 'மீண்டும் அனுப்ப'}
+                </button>
               </div>
-              
-              <div className="form-group">
-                <label>{t('contact.form.location')}</label>
-                <input type="text" name="location" required value={formData.location} onChange={handleChange} placeholder={t('contact.form.locPlh')} />
-              </div>
-              
-              <div className="form-group">
-                <label>{t('contact.form.message')}</label>
-                <textarea name="message" rows="4" value={formData.message} onChange={handleChange} placeholder={t('contact.form.msgPlh')}></textarea>
-              </div>
-              
-              <button type="submit" className="btn btn-primary w-100">{t('contact.form.submit')}</button>
-            </form>
+            )}
           </div>
           
           <div className="contact-info-side fade-in" style={{ animationDelay: '0.2s' }}>
@@ -117,7 +144,7 @@ const Contact = () => {
                     className="directions-link"
                   >
                     <i className="fa-solid fa-diamond-turn-right" style={{ marginRight: '5px' }}></i>
-                    {language === 'en' ? 'Get Directions' : 'திசை அறிக்கை'}
+                    {t('contact.info.getDirections')}
                   </a>
                 </div>
               </div>
@@ -142,185 +169,3 @@ const Contact = () => {
 };
 export default Contact;
 
-
-// import React, { useState } from 'react';
-// import './Contact.css';
-// import { useLanguage } from '../contexts/LanguageContext';
-
-// const Contact = () => {
-//     const { t } = useLanguage();
-
-//     const [formData, setFormData] = useState({
-//         name: '',
-//         email: '',
-//         phone: '',
-//         address: '',
-//         eventType: '',
-//         message: ''
-//     });
-
-//     const [success, setSuccess] = useState(false);
-
-//     const handleInputChange = (e) => {
-//         const { name, value } = e.target;
-//         setFormData(prev => ({
-//             ...prev,
-//             [name]: value
-//         }));
-//     };
-
-//     // const handleSubmit = (e) => {
-//     //     e.preventDefault();
-
-//     //     // ✅ Client-side success only
-//     //     setSuccess(true);
-
-//     //     // Reset form
-//     //     setFormData({
-//     //         name: '',
-//     //         email: '',
-//     //         phone: '',
-//     //         address: '',
-//     //         eventType: '',
-//     //         message: ''
-//     //     });
-
-//     //     // Hide success message after 2 seconds
-//     //     setTimeout(() => {
-//     //         setSuccess(false);
-//     //     }, 2000);
-//     // };
-//     const handleSubmit = (e) => {
-//         e.preventDefault();
-
-//         const message = `
-// New Event Inquiry from Website
-
-// Name: ${formData.name}
-// Email: ${formData.email}
-// Phone: ${formData.phone}
-// Address: ${formData.address}
-// Event Type: ${formData.eventType}
-// Message: ${formData.message}
-//     `;
-
-//         const encodedMessage = encodeURIComponent(message);
-
-//         const whatsappUrl = `https://wa.me/919488730758?text=${encodedMessage}`;
-
-//         // ✅ Open WhatsApp (REQUIRED to send message)
-//         window.open(whatsappUrl, '_blank');
-
-//         // Show success message
-//         setSuccess(true);
-
-//         // Reset form
-//         setFormData({
-//             name: '',
-//             email: '',
-//             phone: '',
-//             address: '',
-//             eventType: '',
-//             message: ''
-//         });
-
-//         // Hide success message after 2 seconds
-//         setTimeout(() => {
-//             setSuccess(false);
-//         }, 2000);
-//     };
-
-//     return (
-//         <section id="contact" className="contact-section">
-//             <div className="container">
-//                 <div className="contact-grid">
-
-//                     <div className="contact-info">
-//                         <span className="section-subtitle">{t('contact.subtitle')}</span>
-//                         <h2 className="section-title">{t('contact.title')}</h2>
-//                         <p className="contact-description">
-//                             {t('contact.desc')}
-//                         </p>
-//                     </div>
-
-//                     <div className="contact-form-wrapper">
-
-//                         {success && (
-//                             <p className="success-message">
-//                                 ✅ Your message has been submitted successfully!
-//                             </p>
-//                         )}
-
-//                         <form className="contact-form" onSubmit={handleSubmit}>
-//                             <input
-//                                 type="text"
-//                                 name="name"
-//                                 placeholder={t('contact.name')}
-//                                 required
-//                                 value={formData.name}
-//                                 onChange={handleInputChange}
-//                             />
-
-//                             <input
-//                                 type="email"
-//                                 name="email"
-//                                 placeholder={t('contact.emailPlh')}
-//                                 required
-//                                 value={formData.email}
-//                                 onChange={handleInputChange}
-//                             />
-
-//                             <input
-//                                 type="tel"
-//                                 name="phone"
-//                                 placeholder={t('contact.phone')}
-//                                 required
-//                                 value={formData.phone}
-//                                 onChange={handleInputChange}
-//                             />
-
-//                             <input
-//                                 type="text"
-//                                 name="address"
-//                                 placeholder={t('contact.address')}
-//                                 required
-//                                 value={formData.address}
-//                                 onChange={handleInputChange}
-//                             />
-
-//                             <select
-//                                 name="eventType"
-//                                 required
-//                                 value={formData.eventType}
-//                                 onChange={handleInputChange}
-//                             >
-//                                 <option value="" disabled>
-//                                     {t('contact.eventType')}
-//                                 </option>
-//                                 <option value="Wedding">{t('contact.wedding')}</option>
-//                                 <option value="Corporate">{t('contact.corporate')}</option>
-//                                 <option value="Birthday">{t('contact.birthday')}</option>
-//                                 <option value="Other">{t('contact.other')}</option>
-//                             </select>
-
-//                             <textarea
-//                                 name="message"
-//                                 placeholder={t('contact.msg')}
-//                                 required
-//                                 value={formData.message}
-//                                 onChange={handleInputChange}
-//                             />
-
-//                             <button type="submit" className="btn btn-primary">
-//                                 {t('contact.sendBtn')}
-//                             </button>
-//                         </form>
-
-//                     </div>
-//                 </div>
-//             </div>
-//         </section>
-//     );
-// };
-
-// export default Contact;

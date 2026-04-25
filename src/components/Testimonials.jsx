@@ -38,10 +38,17 @@ const Testimonials = () => {
         
         <div className="testimonials-grid-new">
           {reviews.map((review, index) => (
+<<<<<<< HEAD
             <div key={index} className="testimonial-card-new hover-lift fade-in" style={{ animationDelay: `${index * 0.15}s` }}>
               <div className="rating">
                 {[...Array(review.rating)].map((_, i) => (
                   <span key={i} className="material-symbols-outlined">star</span>
+=======
+            <div key={index} className="testimonial-card-new fade-in" style={{ animationDelay: `${index * 0.15}s` }}>
+              <div className="rating">
+                {[...Array(review.rating)].map((_, i) => (
+                  <i key={i} className="fa-solid fa-star"></i>
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
                 ))}
               </div>
               <p className="testimonial-text-new">"{review.text}"</p>

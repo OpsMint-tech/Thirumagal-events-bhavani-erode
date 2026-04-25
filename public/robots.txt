@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+<<<<<<< HEAD
 Sitemap: https://thirumagaldecorsandevents.com/sitemap.xml
+=======
+Sitemap: https://thirumagalevents.com/sitemap.xml
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b

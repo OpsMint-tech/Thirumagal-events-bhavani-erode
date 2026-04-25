@@ -3,7 +3,10 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TrustBar from './components/TrustBar';
 import Services from './components/Services';
+<<<<<<< HEAD
 import AboutUs from './components/AboutUs';
+=======
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 import WhyChooseUs from './components/WhyChooseUs';
 import FloatingButtons from './components/FloatingButtons';
 
@@ -17,7 +20,11 @@ const Footer = lazy(() => import('./components/Footer'));
 const LoadingFallback = () => (
   <div className="loading-container">
     <div className="loading-spinner"></div>
+<<<<<<< HEAD
     <div className="loading-text">Thirumagal <span style={{ color: 'var(--color-gold)' }}>Kalyan</span></div>
+=======
+    <div className="loading-text">Thirumagal</div>
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
   </div>
 );
 
@@ -28,7 +35,10 @@ function App() {
       <main>
         <Hero />
         <TrustBar />
+<<<<<<< HEAD
         <AboutUs />
+=======
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
         <Services />
         <WhyChooseUs />
         <Suspense fallback={<LoadingFallback />}>

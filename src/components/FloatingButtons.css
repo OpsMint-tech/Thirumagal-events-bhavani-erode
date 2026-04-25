@@ -1,11 +1,19 @@
 .floating-container {
     position: fixed;
+<<<<<<< HEAD
     bottom: 40px;
+=======
+    bottom: 30px;
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
     right: 30px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     z-index: 1000;
+<<<<<<< HEAD
+=======
+    animation: slideInRight 0.5s ease;
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 .floating-btn {
@@ -17,15 +25,24 @@
     justify-content: center;
     color: white;
     text-decoration: none;
+<<<<<<< HEAD
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     border: 1px solid rgba(255, 255, 255, 0.1);
+=======
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 .whatsapp-btn {
     background-color: #25d366;
+<<<<<<< HEAD
     padding: 10px;
+=======
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 .phone-btn {
@@ -33,6 +50,7 @@
 }
 
 .floating-btn:hover {
+<<<<<<< HEAD
     transform: scale(1.1) rotate(5deg);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
@@ -45,10 +63,31 @@
     width: 100% !important;
     height: 100% !important;
     display: block;
+=======
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.floating-btn span {
+    font-size: 30px;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 @media (max-width: 600px) {
     .floating-container {
+<<<<<<< HEAD
         bottom: 30px;
         right: 20px;
         gap: 12px;
@@ -60,6 +99,19 @@
     }
 
     .floating-btn .material-symbols-outlined {
+=======
+        bottom: 20px;
+        right: 20px;
+        gap: 10px;
+    }
+
+    .floating-btn {
+        width: 50px;
+        height: 50px;
+    }
+
+    .floating-btn span {
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
         font-size: 24px;
     }
 }

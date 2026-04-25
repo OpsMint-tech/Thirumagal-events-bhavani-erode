@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+<<<<<<< HEAD
     <loc>https://thirumagaldecorsandevents.com/</loc>
+=======
+    <loc>https://thirumagalevents.com/</loc>
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
     <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>

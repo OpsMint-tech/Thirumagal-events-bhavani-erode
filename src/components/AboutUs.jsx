@@ -1,7 +1,11 @@
 import React from 'react';
 import './AboutUs.css';
+<<<<<<< HEAD
 import aboutWideImg from '../assets/AboutWide.png';
 import aboutAccentImg from '../assets/About01.webp';
+=======
+import brideImg from '../assets/About01.webp';
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 import { useLanguage } from '../contexts/LanguageContext';
 
 const AboutUs = () => {
@@ -12,6 +16,7 @@ const AboutUs = () => {
             <div className="container">
                 <div className="about-us-grid">
                     <div className="about-image-col">
+<<<<<<< HEAD
                         <div className="image-wrapper">
                             <img src={aboutWideImg} alt="Thirumagal Events Legacy" className="about-img" loading="lazy" />
                             <div className="accent-image-wrapper">
@@ -53,6 +58,23 @@ const AboutUs = () => {
                                 <span className="stat-label">{t('about.stats.happy')}</span>
                             </div>
                         </div>
+=======
+                        <img src={brideImg} alt="Bride in floral arch" className="about-img" loading="lazy" />
+                    </div>
+                    <div className="about-content-col">
+                        <span className="section-subtitle">{t('about.subtitle')}</span>
+                        <h2 className="section-title">{t('about.title')}</h2>
+                        <p className="section-description">
+                            {t('about.desc1')}
+                        </p>
+                        <p className="section-description">
+                            {t('about.desc2')}
+                        </p>
+
+                        <button className="btn btn-primary shop-btn" onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}>
+                            {t('about.btn')} <span className="material-symbols-outlined icon-right">arrow_forward</span>
+                        </button>
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
                     </div>
                 </div>
             </div>

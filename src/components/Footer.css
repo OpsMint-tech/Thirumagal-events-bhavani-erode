@@ -27,6 +27,7 @@
 
 .footer-logo-text {
   font-family: var(--font-heading);
+<<<<<<< HEAD
   font-size: 2.2rem;
   color: white;
   line-height: 1.1;
@@ -48,6 +49,10 @@
   font-weight: 500;
   letter-spacing: 1.2px;
   text-transform: uppercase;
+=======
+  font-size: 2rem;
+  color: var(--color-gold);
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 .footer-tagline {
@@ -104,6 +109,7 @@
   margin-bottom: 20px;
   font-size: 1rem;
   line-height: 1.5;
+<<<<<<< HEAD
   align-items: flex-start;
 }
 
@@ -112,6 +118,13 @@
   font-size: 20px;
   margin-top: 2px;
   flex-shrink: 0;
+=======
+}
+
+.footer-info-col i {
+  color: var(--color-gold);
+  margin-top: 5px;
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 .footer-links-col ul {
@@ -156,6 +169,7 @@
 }
 
 @media (max-width: 768px) {
+<<<<<<< HEAD
   .footer-section {
     padding: 40px 0 30px;
     text-align: center;
@@ -233,5 +247,20 @@
 
   .footer-bottom p {
     font-size: 0.8rem;
+=======
+  .footer-grid-new {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .footer-logo-text {
+    font-size: 1.8rem;
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
   }
 }

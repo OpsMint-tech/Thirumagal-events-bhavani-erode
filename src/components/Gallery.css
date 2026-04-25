@@ -1,6 +1,9 @@
 .gallery-section {
   background-color: var(--color-ivory);
+<<<<<<< HEAD
   padding: var(--section-padding);
+=======
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 .gallery-grid-new {
@@ -13,9 +16,15 @@
   position: relative;
   aspect-ratio: 4/5;
   overflow: hidden;
+<<<<<<< HEAD
   border-radius: 16px;
   cursor: pointer;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+=======
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 .gallery-item-new img {
@@ -35,12 +44,20 @@
   left: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   background: rgba(20, 20, 20, 0.5);
+=======
+  background: rgba(20, 20, 20, 0.6);
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
+<<<<<<< HEAD
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+=======
+  transition: var(--transition);
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 .gallery-item-new:hover .gallery-hover-overlay {
@@ -49,6 +66,7 @@
 
 .gallery-view-text {
   color: white;
+<<<<<<< HEAD
   border: 1px solid rgba(255, 255, 255, 0.6);
   padding: 12px 25px;
   font-size: 0.8rem;
@@ -58,6 +76,15 @@
   transform: translateY(20px);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(5px);
+=======
+  border: 1px solid white;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transform: translateY(20px);
+  transition: var(--transition);
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 .gallery-item-new:hover .gallery-view-text {
@@ -90,15 +117,23 @@
 }
 
 .gallery-nav-btn {
+<<<<<<< HEAD
   background: var(--color-white);
   border: 1px solid rgba(0, 0, 0, 0.08);
   width: 55px;
   height: 55px;
+=======
+  background: white;
+  border: 1px solid #ddd;
+  width: 45px;
+  height: 45px;
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+<<<<<<< HEAD
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--color-text-dark);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.04);
@@ -106,14 +141,23 @@
 
 .gallery-nav-btn .material-symbols-outlined {
   font-size: 22px;
+=======
+  transition: var(--transition);
+  color: var(--color-charcoal);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 .gallery-nav-btn:hover:not(:disabled) {
   background-color: var(--color-gold);
   color: white;
   border-color: var(--color-gold);
+<<<<<<< HEAD
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(4, 165, 152, 0.2);
+=======
+  transform: translateY(-2px);
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 .gallery-nav-btn:disabled {
@@ -127,15 +171,28 @@
 }
 
 .dot {
+<<<<<<< HEAD
   width: 10px;
   height: 10px;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+=======
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ddd;
+  cursor: pointer;
+  transition: var(--transition);
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 .dot.active {
   background-color: var(--color-gold);
+<<<<<<< HEAD
   transform: scale(1.3);
+=======
+  transform: scale(1.4);
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }

@@ -3,6 +3,7 @@
   --color-gold-light: #3bc5bc;
   --color-gold-dark: #027b71;
   --color-ivory: #ffffff;
+<<<<<<< HEAD
   --color-white: #ffffff;
   --color-charcoal: #121212;
   --color-charcoal-light: #1e1e1e;
@@ -19,17 +20,39 @@
   --border-radius: 12px;
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+=======
+  --color-charcoal: #121212;
+  --color-charcoal-light: #1e1e1e;
+  --color-text-dark: #121212;
+  --color-text-white: #ffffff;
+  --color-text-gray: #b0b0b0;
+  
+  --font-main: 'Outfit', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  
+  --section-padding: 100px 5%;
+  --border-radius: 8px;
+  --transition: all 0.3s ease;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 @media (max-width: 768px) {
   :root {
+<<<<<<< HEAD
     --section-padding: 20px 20px;
+=======
+    --section-padding: 60px 20px;
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
   }
 }
 
 html {
   scroll-behavior: smooth;
+<<<<<<< HEAD
   scroll-padding-top: 100px;
+=======
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 * {
@@ -75,7 +98,11 @@ button, .btn {
   align-items: center;
   justify-content: center;
   padding: 12px 28px;
+<<<<<<< HEAD
   border-radius: 8px;
+=======
+  border-radius: 4px;
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -116,11 +143,14 @@ button, .btn {
   border: none;
 }
 
+<<<<<<< HEAD
 /* Text Utilities */
 .text-gold {
   color: var(--color-gold);
 }
 
+=======
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 /* Section Layouts */
 section {
   padding: var(--section-padding);
@@ -129,7 +159,11 @@ section {
 .section-head {
   text-align: center;
   max-width: 800px;
+<<<<<<< HEAD
   margin: 0 auto 10px;
+=======
+  margin: 0 auto 60px;
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 .section-label {
@@ -139,7 +173,11 @@ section {
   font-weight: 700;
   font-size: 0.85rem;
   display: block;
+<<<<<<< HEAD
   margin-bottom: 5px;
+=======
+  margin-bottom: 10px;
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 .section-title {
@@ -147,13 +185,21 @@ section {
   color: var(--color-charcoal);
   position: relative;
   display: block;
+<<<<<<< HEAD
   margin-bottom: 15px;
+=======
+  margin-bottom: 20px;
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 @media (max-width: 768px) {
   .section-title {
+<<<<<<< HEAD
     font-size: 1.8rem;
     margin-bottom: 20px;
+=======
+    font-size: 2rem;
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
   }
 }
 
@@ -179,6 +225,7 @@ section {
 }
 
 /* Animations */
+<<<<<<< HEAD
 .reveal-on-scroll {
   opacity: 0;
   transform: translateY(30px);
@@ -192,6 +239,10 @@ section {
 
 .fade-in {
   animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+=======
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 @keyframes fadeIn {
@@ -199,6 +250,7 @@ section {
   to { opacity: 1; transform: translateY(0); }
 }
 
+<<<<<<< HEAD
 /* Staggered Animations Utility */
 .stagger-1 { animation-delay: 0.1s; }
 .stagger-2 { animation-delay: 0.2s; }
@@ -302,10 +354,16 @@ section {
   left: 0;
   background: var(--color-white);
   z-index: 9999;
+=======
+/* Loading States */
+.loading-container {
+  height: 200px;
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
   gap: 20px;
 }
 
@@ -316,6 +374,28 @@ section {
   border-top-color: var(--color-gold);
   border-radius: 50%;
   animation: spin 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+=======
+  gap: 15px;
+  color: var(--color-gold);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(4, 165, 152, 0.1);
+  border-top-color: var(--color-gold);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  opacity: 0.8;
+>>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 @keyframes spin {

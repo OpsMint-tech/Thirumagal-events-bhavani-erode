@@ -1,0 +1,237 @@
+.footer-section {
+  background-color: var(--color-charcoal);
+  color: white;
+  padding: 80px 0 40px;
+  border-top: 1px solid var(--color-gold);
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 80px;
+  margin-bottom: 60px;
+}
+
+.footer-logo-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.footer-logo-img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-logo-text {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+
+.footer-logo-accent {
+  color: white;
+}
+
+.footer-logo-text-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo-subtext {
+  font-size: 0.75rem;
+  color: var(--color-gold-light);
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.footer-tagline {
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.social-links-new {
+  display: flex;
+  gap: 20px;
+}
+
+.social-links-new a {
+  width: 45px;
+  height: 45px;
+  background-color: var(--color-charcoal-light);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  transition: var(--transition);
+  border: 1px solid transparent;
+}
+
+.social-links-new a:hover {
+  background-color: var(--color-gold);
+  transform: translateY(-5px);
+  border-color: var(--color-gold-light);
+}
+
+.footer-grid-new {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+}
+
+.footer-info-col h4,
+.footer-links-col h4 {
+  color: var(--color-gold-light);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.footer-info-col p {
+  color: #ccc;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  line-height: 1.5;
+  align-items: flex-start;
+}
+
+.footer-icon {
+  color: var(--color-gold);
+  font-size: 20px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.footer-links-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links-col ul li {
+  margin-bottom: 12px;
+}
+
+.footer-links-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+.footer-links-col ul li a:hover {
+  color: var(--color-gold);
+  padding-left: 8px;
+}
+
+.footer-bottom {
+  padding-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom p {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 1024px) {
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 40px 0 30px;
+    text-align: center;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .footer-logo-wrapper {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .footer-logo-img {
+    height: 50px;
+  }
+  
+  .footer-logo-text {
+    font-size: 1.5rem;
+  }
+
+  .footer-logo-subtext {
+    font-size: 0.6rem;
+    letter-spacing: 0.5px;
+  }
+
+  .footer-tagline {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .social-links-new {
+    justify-content: center;
+  }
+
+  .footer-grid-new {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-links-col ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .footer-links-col h4,
+  .footer-info-col h4 {
+    margin-bottom: 15px;
+  }
+
+  .footer-info-col p {
+    justify-content: center;
+    align-items: center; /* Better for centered icons */
+    text-align: center;
+    max-width: 300px;
+    margin: 0 auto 15px;
+  }
+
+  .footer-icon {
+    margin-top: 0;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .footer-bottom p {
+    font-size: 0.8rem;
+  }
+}

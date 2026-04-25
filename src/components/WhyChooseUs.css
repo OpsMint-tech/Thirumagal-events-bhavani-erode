@@ -1,0 +1,148 @@
+.why-us-section {
+  background-color: var(--color-charcoal);
+  color: white;
+  padding: var(--section-padding);
+}
+
+.why-us-section .section-title {
+  color: white;
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.why-points-col {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.why-point {
+  display: flex;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+  backdrop-filter: blur(5px);
+}
+
+.why-point:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(212, 175, 55, 0.3);
+  transform: translateX(10px);
+}
+
+.why-icon {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  background-color: rgba(212, 175, 55, 0.1) !important;
+  color: var(--color-gold);
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
+  border-radius: 14px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  transition: all 0.4s ease;
+}
+
+.why-point:hover .why-icon {
+  background-color: var(--color-gold);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.why-text h3 {
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  color: var(--color-gold-light);
+}
+
+.why-text p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.why-us-image-wrapper {
+  position: relative;
+  padding: 30px;
+}
+
+.why-image {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.why-experience-badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--color-gold);
+  padding: 25px 35px;
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  transform: translate(-10%, -10%);
+}
+
+.why-exp-years {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.why-exp-text {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 5px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+  .why-us-grid {
+    grid-template-columns: 1fr;
+    gap: 80px;
+  }
+  
+  .why-us-image-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .why-point {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px;
+  }
+  
+  .why-experience-badge {
+    position: relative;
+    transform: none;
+    margin: 0 auto 30px;
+    width: fit-content;
+  }
+  
+  .why-us-image-wrapper {
+    padding: 0;
+  }
+}

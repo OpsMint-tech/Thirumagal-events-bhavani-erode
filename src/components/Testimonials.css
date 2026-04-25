@@ -1,0 +1,115 @@
+.testimonials-section {
+  background-color: var(--color-ivory);
+  padding: var(--section-padding);
+}
+
+.testimonials-grid-new {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.testimonial-card-new {
+  background: linear-gradient(135deg, #ffffff 0%, rgba(4, 165, 152, 0.1) 100%);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(4, 165, 152, 0.08);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.testimonial-card-new::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(4, 165, 152, 0.08) 0%, transparent 70%);
+  opacity: 0.5; /* Permanent highlight */
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.testimonial-card-new:hover {
+  border-color: var(--color-gold);
+  box-shadow: 0 30px 60px rgba(4, 165, 152, 0.15);
+  transform: translateY(-10px);
+}
+
+.testimonial-card-new:hover::after {
+  opacity: 1;
+  background: radial-gradient(circle, rgba(4, 165, 152, 0.12) 0%, transparent 70%);
+}
+
+.testimonial-card-new::before {
+  content: '\201C';
+  position: absolute;
+  top: 25px;
+  right: 35px;
+  font-size: 5rem;
+  color: var(--color-gold);
+  opacity: 0.1;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+
+.rating {
+  color: var(--color-gold);
+  margin-bottom: 25px;
+  display: flex;
+  gap: 4px;
+}
+
+.rating .material-symbols-outlined {
+  font-size: 1.2rem;
+  font-variation-settings: 'FILL' 1;
+}
+
+.testimonial-text-new {
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+  line-height: 1.8;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.testimonial-meta {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  padding-top: 25px;
+}
+
+.client-name {
+  font-size: 1.15rem;
+  color: var(--color-text-dark);
+  margin-bottom: 5px;
+  font-weight: 800;
+}
+
+.client-info {
+  font-size: 0.85rem;
+  color: var(--color-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 1024px) {
+  .testimonials-grid-new {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-grid-new {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonial-card-new {
+    padding: 40px 30px;
+  }
+}

@@ -1,0 +1,107 @@
+.services-section {
+  background-color: var(--color-white);
+  padding: var(--section-padding);
+}
+
+.services-grid-new {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.service-card-new {
+  background: linear-gradient(135deg, #ffffff 0%, rgba(4, 165, 152, 0.1) 100%);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  text-align: center;
+  border-radius: 24px;
+  border: 1px solid rgba(4, 165, 152, 0.08);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.service-card-new::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(4, 165, 152, 0.08) 0%, transparent 70%);
+  opacity: 0.5; /* Always visible for a constant highlight effect */
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.service-card-new:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(4, 165, 152, 0.15);
+}
+
+.service-card-new:hover::before {
+  opacity: 1;
+  background: radial-gradient(circle, rgba(4, 165, 152, 0.12) 0%, transparent 70%);
+}
+
+.service-card-icon {
+  width: 85px;
+  height: 85px;
+  margin: 0 auto 30px;
+  font-size: 2.2rem;
+  background: rgba(4, 165, 152, 0.05) !important;
+  color: var(--color-gold);
+  transition: all 0.5s ease;
+}
+
+.service-card-new:hover .service-card-icon {
+  background: var(--color-gold) !important;
+  color: var(--color-white);
+  transform: rotateY(180deg);
+}
+
+.service-card-title {
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+  color: var(--color-text-dark);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.service-card-desc {
+  font-size: 1.05rem;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .services-grid-new {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+  
+  .service-card-new {
+    padding: 25px 15px;
+    border-radius: 20px;
+  }
+
+  .service-card-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .service-card-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .service-card-desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}

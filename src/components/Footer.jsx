@@ -12,7 +12,6 @@ const Footer = () => {
           <div className="footer-brand">
             <div className="footer-logo-wrapper">
               <img src={logoImg} alt="Thirumagal Logo" className="footer-logo-img" />
-<<<<<<< HEAD
               <div className="footer-logo-text-group">
                 <h2 className="footer-logo-text">Thirumagal <span className="footer-logo-accent">Kalyan</span></h2>
                 <span className="footer-logo-subtext">Wedding / event planners & decors</span>
@@ -24,30 +23,15 @@ const Footer = () => {
               <a href="https://facebook.com/thirumagaldecors" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span className="material-symbols-outlined">group</span></a>
               <a href="https://instagram.com/thirumagaldecors" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span className="material-symbols-outlined">photo_camera</span></a>
               <a href="https://youtube.com/@thirumagaldecors" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><span className="material-symbols-outlined">play_circle</span></a>
-=======
-              <h2 className="footer-logo-text">Thirumagal</h2>
-            </div>
-            <p className="footer-tagline">{t('footer.tagline')}</p>
-            <div className="social-links-new">
-              <a href="#" aria-label="Facebook"><i className="fa-brands fa-facebook"></i></a>
-              <a href="#" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
-              <a href="#" aria-label="YouTube"><i className="fa-brands fa-youtube"></i></a>
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
             </div>
           </div>
           
           <div className="footer-grid-new">
             <div className="footer-info-col">
               <h4>{t('footer.contactTitle')}</h4>
-<<<<<<< HEAD
               <p><span className="material-symbols-outlined footer-icon">location_on</span> Thirumagal Kalyan Store, Kavundapadi Main Road, Kalingarayanpalayam, Bhavani, Erode – 638301</p>
               <p><span className="material-symbols-outlined footer-icon">call</span> {t('contact.form.phone')} 1: +91 98429 30758</p>
               <p><span className="material-symbols-outlined footer-icon">call</span> {t('contact.form.phone')} 2: +91 94887 30758</p>
-=======
-              <p><i className="fa-solid fa-location-dot"></i> 6/186, Kavundapadi Main Road, Kalingarayanpalayam, Bhavani, Erode – 638301</p>
-              <p><i className="fa-solid fa-phone"></i> {t('contact.form.phone')} 1: +91 98429 30758</p>
-              <p><i className="fa-solid fa-phone"></i> {t('contact.form.phone')} 2: +91 94887 30758</p>
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
             </div>
             
             <div className="footer-links-col">

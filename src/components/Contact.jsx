@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 import './Contact.css';
 import { useLanguage } from '../contexts/LanguageContext';
-<<<<<<< HEAD
 import { openWhatsApp } from '../utils/whatsapp';
-=======
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 
 const Contact = () => {
   const { t, language } = useLanguage();
@@ -17,7 +14,6 @@ const Contact = () => {
     location: '',
     message: ''
   });
-<<<<<<< HEAD
   const [errors, setErrors] = useState({});
 
   const handleChange = (e) => {
@@ -52,17 +48,11 @@ const Contact = () => {
 
     setErrors(newErrors);
     setFormData({ ...formData, [name]: value });
-=======
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     
-<<<<<<< HEAD
     // Final validation check
     if (formData.phone.length !== 10) {
       setErrors({ ...errors, phone: language === 'en' ? 'Phone must be 10 digits' : 'தொலைபேசி எண் 10 இலக்கங்களாக இருக்க வேண்டும்' });
@@ -79,8 +69,6 @@ const Contact = () => {
       return;
     }
 
-=======
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
     // Prepare WhatsApp message
     const whatsappMessage = `Hello, I would like to book a decoration.%0A%0A` +
       `*Name:* ${formData.name}%0A` +
@@ -90,19 +78,11 @@ const Contact = () => {
       `*Location:* ${formData.location}%0A` +
       `*Message:* ${formData.message}`;
     
-<<<<<<< HEAD
     // Open WhatsApp using utility
     openWhatsApp(whatsappMessage);
     
     // Show success alert
     window.alert(language === 'en' ? 'Your enquiry has been sent successfully!' : 'உங்கள் விசாரணை வெற்றிகரமாக அனுப்பப்பட்டது!');
-=======
-    // Open WhatsApp
-    window.open(`https://wa.me/919842930758?text=${whatsappMessage}`, '_blank');
-    
-    // Set success state
-    setIsSubmitted(true);
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
     
     // Reset form
     setFormData({
@@ -113,10 +93,7 @@ const Contact = () => {
       location: '',
       message: ''
     });
-<<<<<<< HEAD
     setErrors({});
-=======
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
   };
 
   return (
@@ -129,7 +106,6 @@ const Contact = () => {
         
         <div className="contact-grid-new">
           <div className="contact-form-side fade-in">
-<<<<<<< HEAD
             <form className="booking-form" onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
@@ -187,73 +163,12 @@ const Contact = () => {
               
               <button type="submit" className="btn btn-primary w-100 shimmer-btn" style={{ height: '60px', borderRadius: '12px' }}>{t('contact.form.submit')}</button>
             </form>
-=======
-            {!isSubmitted ? (
-              <form className="booking-form" onSubmit={handleSubmit}>
-                <div className="form-row">
-                  <div className="form-group">
-                    <label>{t('contact.form.name')}</label>
-                    <input type="text" name="name" required value={formData.name} onChange={handleChange} placeholder={t('contact.form.namePlh')} />
-                  </div>
-                  <div className="form-group">
-                    <label>{t('contact.form.phone')}</label>
-                    <input type="tel" name="phone" required value={formData.phone} onChange={handleChange} placeholder={t('contact.form.phonePlh')} />
-                  </div>
-                </div>
-                
-                <div className="form-row">
-                  <div className="form-group">
-                    <label>{t('contact.form.eventType')}</label>
-                    <select name="eventType" required value={formData.eventType} onChange={handleChange}>
-                      <option value="">{t('contact.form.selectEvent')}</option>
-                      <option value="Wedding">Wedding</option>
-                      <option value="Reception">Reception</option>
-                      <option value="Birthday">Birthday</option>
-                      <option value="Engagement">Engagement</option>
-                      <option value="Corporate">Corporate</option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
-                  <div className="form-group">
-                    <label>{t('contact.form.eventDate')}</label>
-                    <input type="date" name="eventDate" required value={formData.eventDate} onChange={handleChange} />
-                  </div>
-                </div>
-                
-                <div className="form-group">
-                  <label>{t('contact.form.location')}</label>
-                  <input type="text" name="location" required value={formData.location} onChange={handleChange} placeholder={t('contact.form.locPlh')} />
-                </div>
-                
-                <div className="form-group">
-                  <label>{t('contact.form.message')}</label>
-                  <textarea name="message" rows="4" value={formData.message} onChange={handleChange} placeholder={t('contact.form.msgPlh')}></textarea>
-                </div>
-                
-                <button type="submit" className="btn btn-primary w-100">{t('contact.form.submit')}</button>
-              </form>
-            ) : (
-              <div className="form-success-state fade-in">
-                <i className="fa-solid fa-circle-check"></i>
-                <h3>{t('contact.info.successTitle')}</h3>
-                <p>{t('contact.info.successMsg')}</p>
-                <button className="btn btn-outline" onClick={() => setIsSubmitted(false)}>
-                  {language === 'en' ? 'Send Another Inquiry' : 'மீண்டும் அனுப்ப'}
-                </button>
-              </div>
-            )}
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
           </div>
           
           <div className="contact-info-side fade-in" style={{ animationDelay: '0.2s' }}>
             <div className="info-cards">
-<<<<<<< HEAD
               <div className="info-card glass-icon-card">
                 <span className="material-symbols-outlined">call</span>
-=======
-              <div className="info-card">
-                <i className="fa-solid fa-phone"></i>
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
                 <div className="info-details">
                   <h4>{t('contact.info.call')}</h4>
                   <a href="tel:+919842930758">+91 98429 30758</a>
@@ -261,7 +176,6 @@ const Contact = () => {
                 </div>
               </div>
               
-<<<<<<< HEAD
               <div className="info-card glass-icon-card">
                 <span className="material-symbols-outlined">chat</span>
                 <div className="info-details">
@@ -282,32 +196,11 @@ const Contact = () => {
                   <p>Thirumagal Kalyan Store, Kavundapadi Main Road, Kalingarayanpalayam, Bhavani, Erode - 638301</p>
                   <a 
                     href="https://maps.app.goo.gl/G1Zoyz1o8MktSym3A" 
-=======
-              <div className="info-card">
-                <i className="fa-brands fa-whatsapp"></i>
-                <div className="info-details">
-                  <h4>{t('contact.info.whatsapp')}</h4>
-                  <a href="https://wa.me/919842930758" target="_blank" rel="noopener noreferrer">{t('contact.info.chat')}</a>
-                </div>
-              </div>
-              
-              <div className="info-card">
-                <i className="fa-solid fa-location-dot"></i>
-                <div className="info-details">
-                  <h4>{t('contact.info.visit')}</h4>
-                  <p>6/186, Kavundapadi Main Road, Kalingarayanpalayam, Bhavani, Erode - 638301</p>
-                  <a 
-                    href="https://www.google.com/maps/dir//6/186,+Kavundapadi+Main+Road,+Kalingarayanpalayam,+Bhavani,+Erode+-+638301/" 
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="directions-link"
                   >
-<<<<<<< HEAD
                     <span className="material-symbols-outlined" style={{ marginRight: '5px', fontSize: '18px' }}>directions</span>
-=======
-                    <i className="fa-solid fa-diamond-turn-right" style={{ marginRight: '5px' }}></i>
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
                     {t('contact.info.getDirections')}
                   </a>
                 </div>
@@ -316,11 +209,7 @@ const Contact = () => {
             
             <div className="map-wrapper">
               <iframe
-<<<<<<< HEAD
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.594592293678!2d77.6762926!3d11.436943299999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba969dd89a6a3e7%3A0xbea0ea6abc04369d!2sThirumagal%20Kalyan%20Store!5e0!3m2!1sen!2sin!4v1777101769048!5m2!1sen!2sin"
-=======
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15647.962007812161!2d77.67499999999998!3d11.439999999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba9198357be8d1d%3A0x8f7f502c3427357c!2sBhavani%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1712648000000!5m2!1sen!2sin"
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
                 width="100%"
                 height="250"
                 style={{ border: 0, borderRadius: '8px' }}

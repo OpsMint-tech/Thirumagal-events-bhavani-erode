@@ -46,30 +46,18 @@ const Gallery = () => {
   }, []);
 
   const galleryImages = [
-<<<<<<< HEAD
     { img: stage06, alt: 'Elegant stage decoration Bhavani' },
     { img: stage07, alt: 'Traditional wedding stage Erode' },
     { img: stage08, alt: 'Flower decoration for wedding stage' },
     { img: stage09, alt: 'Floral backdrop for events' },
     { img: stage11, alt: 'Stage decoration for corporate events' },
     { img: stage12, alt: 'Reception stage design Erode' },
-=======
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
     { img: stage01, alt: 'Grand wedding stage decoration in Bhavani by Thirumagal Decors' },
     { img: stage02, alt: 'Traditional floral stage setup in Erode' },
     { img: stage03, alt: 'Modern reception decoration Bhavani' },
     { img: stage04, alt: 'Premium wedding decor Erode district' },
     { img: reception01, alt: 'Reception stage with floral arches' },
     { img: stage05, alt: 'Grand stage setup Coimbatore' },
-<<<<<<< HEAD
-=======
-    { img: stage06, alt: 'Elegant stage decoration Bhavani' },
-    { img: stage07, alt: 'Traditional wedding stage Erode' },
-    { img: stage08, alt: 'Flower decoration for wedding stage' },
-    { img: stage09, alt: 'Floral backdrop for events' },
-    { img: stage11, alt: 'Stage decoration for corporate events' },
-    { img: stage12, alt: 'Reception stage design Erode' },
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
     { img: stage13, alt: 'Traditional event decor Bhavani' },
     { img: stage14, alt: 'Modern stage setup Erode' },
     { img: stage16, alt: 'Wedding reception decor Coimbatore' },
@@ -124,11 +112,7 @@ const Gallery = () => {
             disabled={currentPage === 0}
             aria-label="Previous Page"
           >
-<<<<<<< HEAD
             <span className="material-symbols-outlined">arrow_back</span>
-=======
-            <i className="fa-solid fa-arrow-left"></i>
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
           </button>
           <div className="gallery-pagination-dots">
             {Array.from({ length: totalPages }).map((_, i) => (
@@ -148,11 +132,7 @@ const Gallery = () => {
             disabled={currentPage === totalPages - 1}
             aria-label="Next Page"
           >
-<<<<<<< HEAD
             <span className="material-symbols-outlined">arrow_forward</span>
-=======
-            <i className="fa-solid fa-arrow-right"></i>
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
           </button>
         </div>
       </div>

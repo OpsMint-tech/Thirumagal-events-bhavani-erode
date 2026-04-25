@@ -15,11 +15,7 @@
 
 .contact-form-side {
   background-color: white;
-<<<<<<< HEAD
   padding: 20px;
-=======
-  padding: 40px;
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
   border-radius: var(--border-radius);
   color: var(--color-charcoal);
   box-shadow: var(--shadow);
@@ -59,7 +55,6 @@
 .booking-form textarea:focus {
   outline: none;
   border-color: var(--color-gold);
-<<<<<<< HEAD
   box-shadow: 0 0 0 3px rgba(4, 165, 152, 0.1);
 }
 
@@ -86,9 +81,6 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   margin-top: 5px;
   display: block;
   font-weight: 500;
-=======
-  box-shadow: 0 0 0 3px rgba(201, 151, 44, 0.1);
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 .info-cards {
@@ -104,48 +96,31 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   align-items: center;
 }
 
-<<<<<<< HEAD
 .info-card .material-symbols-outlined {
   width: 50px;
   height: 50px;
   background-color: rgba(4, 165, 152, 0.1);
-=======
-.info-card i {
-  width: 50px;
-  height: 50px;
-  background-color: rgba(201, 151, 44, 0.1);
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
   color: var(--color-gold);
   border: 1px solid var(--color-gold);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
   font-size: 1.4rem;
   flex-shrink: 0;
-=======
-  font-size: 1.25rem;
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 .info-details h4 {
   font-size: 0.8rem;
   text-transform: uppercase;
-<<<<<<< HEAD
   color: var(--color-gold);
   letter-spacing: 2px;
   font-weight: 700;
-=======
-  color: var(--color-gold-light);
-  letter-spacing: 1px;
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
   margin-bottom: 5px;
 }
 
 .info-details p,
 .info-details a {
-<<<<<<< HEAD
   font-size: 1.05rem;
   color: white;
   display: block;
@@ -170,17 +145,6 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   text-align: left;
   transition: var(--transition);
   display: block;
-=======
-  font-size: 1rem;
-  color: #ccc;
-  display: block;
-  text-decoration: none;
-  transition: var(--transition);
-}
-
-.info-details a:hover {
-  color: var(--color-gold);
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 .map-wrapper {
@@ -199,11 +163,7 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
   text-decoration: underline !important;
 }
 
-<<<<<<< HEAD
 .directions-link .material-symbols-outlined {
-=======
-.directions-link i {
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
   width: auto !important;
   height: auto !important;
   background: none !important;

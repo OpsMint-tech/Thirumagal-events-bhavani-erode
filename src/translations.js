@@ -5,10 +5,7 @@ export const translations = {
       services: "Services",
       whyUs: "Why Us",
       gallery: "Gallery",
-<<<<<<< HEAD
       about: "About",
-=======
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
       reviews: "Reviews",
       faq: "FAQ",
       bookNow: "Book Now"
@@ -24,7 +21,6 @@ export const translations = {
       ctaGallery: "View Our Work"
     },
     about: {
-<<<<<<< HEAD
       subtitle: "Our Story & Legacy",
       title: "Crafting Timeless Celebrations Since 1991",
       desc1: "With over three decades of excellence, Thirumagal Events has evolved from a local decorator to Erode district's most trusted name in premium event management. Our journey began with a simple mission: to infuse every celebration with unparalleled elegance and traditional soul.",
@@ -35,13 +31,6 @@ export const translations = {
         events: "5000+ Events",
         happy: "Happy Clients"
       }
-=======
-      subtitle: "About Our Legacy",
-      title: "35 Years of Crafting Beautiful Events",
-      desc1: "Established in 1991, Thirumagal Decors and Events has been the gold standard for event decoration in Bhavani and Erode. We specialize in turning your dream visions into reality with unmatched precision.",
-      desc2: "From grand traditional weddings to modern corporate setups, our team brings decades of experience and a passion for elegance to every project we undertake.",
-      btn: "Learn More About Us"
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
     },
     trust: {
       experience: "35+ Years of Trust",
@@ -179,10 +168,7 @@ export const translations = {
       services: "சேவைகள்",
       whyUs: "ஏன் நாம்",
       gallery: "புகைப்படங்கள்",
-<<<<<<< HEAD
       about: "எங்களைப் பற்றி",
-=======
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
       reviews: "கருத்துக்கள்",
       faq: "கேள்விகள்",
       bookNow: "முன்பதிவு"
@@ -198,7 +184,6 @@ export const translations = {
       ctaGallery: "எங்கள் வேலைகளைப் பாருங்கள்"
     },
     about: {
-<<<<<<< HEAD
       subtitle: "எங்கள் கதை மற்றும் பாரம்பரியம்",
       title: "1991 முதல் காலமற்ற கொண்டாட்டங்களை உருவாக்குதல்",
       desc1: "மூன்று தசாப்தங்களுக்கும் மேலான சிறந்து விளங்கும் திரு மகள் ஈவென்ட்ஸ், ஒரு உள்ளூர் அலங்கார நிறுவனத்திலிருந்து ஈரோடு மாவட்டத்தின் மிகவும் நம்பகமான பிரீமியம் நிகழ்வு மேலாண்மை பெயராக வளர்ந்துள்ளது. எங்களின் பயணம் ஒரு எளிய நோக்கத்துடன் தொடங்கியது: ஒவ்வொரு கொண்டாட்டத்திலும் ஈடு இணையற்ற நேர்த்தியையும் பாரம்பரிய ஆன்மாவையும் புகுத்துவது.",
@@ -209,13 +194,6 @@ export const translations = {
         events: "5000+ நிகழ்ச்சிகள்",
         happy: "மகிழ்ச்சியான வாடிக்கையாளர்கள்"
       }
-=======
-      subtitle: "எங்கள் பாரம்பரியம்",
-      title: "35 ஆண்டுகால அழகான நிகழ்வுகள்",
-      desc1: "1991 இல் நிறுவப்பட்ட திரு மகள் டெகர்ஸ் மற்றும் ஈவென்ட்ஸ் பவானி மற்றும் ஈரோட்டில் நிகழ்வு அலங்காரத்திற்கான சிறந்த அடையாளமாக உள்ளது. உங்கள் கனவு காட்சிகளை ஈடு இணையற்ற துல்லியத்துடன் நிஜமாக்குவதில் நாங்கள் நிபுணத்துவம் பெற்றுள்ளோம்.",
-      desc2: "பிரம்மாண்டமான பாரம்பரிய திருமணங்கள் முதல் நவீன கார்ப்பரேட் அமைப்புகள் வரை, எங்கள் குழு பல தசாப்தகால அனுபவத்தையும் நேர்த்திக்கான ஆர்வத்தையும் நாங்கள் மேற்கொள்ளும் ஒவ்வொரு திட்டத்திற்கும் கொண்டு வருகிறது.",
-      btn: "எங்களைப் பற்றி மேலும் அறிய"
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
     },
     trust: {
       experience: "35+ ஆண்டுகால நம்பிக்கை",

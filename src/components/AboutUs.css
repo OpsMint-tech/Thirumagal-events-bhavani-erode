@@ -1,30 +1,19 @@
 .about-us-section {
-<<<<<<< HEAD
     padding: var(--section-padding);
     background-color: #fdfdfd;
     overflow: hidden;
     position: relative;
-=======
-    padding: 100px 20px;
-    background-color: #fff;
-    color: #000;
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 .about-us-grid {
     display: grid;
-<<<<<<< HEAD
     grid-template-columns: 1fr 1fr;
     max-width: 1300px;
     margin: 0 auto;
-=======
-    grid-template-columns: 0.8fr 1.2fr;
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
     gap: 80px;
     align-items: center;
 }
 
-<<<<<<< HEAD
 /* Image Column Styling - Premium Layered Look */
 .about-image-col {
     position: relative;
@@ -67,18 +56,12 @@
     opacity: 0.1;
     z-index: 1;
     filter: blur(40px);
-=======
-.about-image-col {
-    height: 600px;
-    position: relative;
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
 }
 
 .about-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-<<<<<<< HEAD
     display: block;
     transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -322,52 +305,5 @@
 
     .about-header .section-title {
         font-size: 2.2rem;
-=======
-    /* Optional: Add a subtle shadow or styling if visible in design */
-    box-shadow: 20px 20px 0px rgba(0, 0, 0, 0.05);
-}
-
-.about-content-col {
-    padding-right: 50px;
-}
-
-.about-content-col .section-title {
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-.about-content-col .section-description {
-    margin-bottom: 25px;
-}
-
-@media (max-width: 900px) {
-    .about-us-section {
-        padding: 60px 20px;
-    }
-
-    .about-us-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-
-    .about-image-col {
-        height: 400px;
-        order: 2;
-        /* Move image below text for better mobile UX */
-    }
-
-    .about-img {
-        box-shadow: none;
-    }
-
-    .about-content-col {
-        padding-right: 0;
-        text-align: center;
-        order: 1;
-    }
-
-    .section-description {
-        margin: 0 auto 25px auto;
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
     }
 }

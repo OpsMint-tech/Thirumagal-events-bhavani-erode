@@ -1,10 +1,6 @@
 .trust-bar {
   background-color: var(--color-charcoal);
-<<<<<<< HEAD
   padding: 30px 0;
-=======
-  padding: 40px 0;
->>>>>>> 7ad400d73668294f9adc2b2ee35117ef984e9a1b
   border-top: 1px solid rgba(201, 151, 44, 0.3);
   border-bottom: 1px solid rgba(201, 151, 44, 0.3);
 }

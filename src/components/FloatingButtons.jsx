@@ -8,7 +8,7 @@ const FloatingButtons = () => {
     return (
         <div className="floating-container">
             <button
-                onClick={() => openWhatsApp()}
+                onClick={() => openWhatsApp(t('contact.info.whatsappDefault'))}
                 className="floating-btn whatsapp-btn"
                 title={t('contact.info.chat')}
                 aria-label="Chat on WhatsApp"
@@ -18,7 +18,7 @@ const FloatingButtons = () => {
                 </svg>
             </button>
             <a
-                href="tel:+919842930758"
+                href="tel:+919488730758"
                 className="floating-btn phone-btn"
                 title={t('contact.info.call')}
             >

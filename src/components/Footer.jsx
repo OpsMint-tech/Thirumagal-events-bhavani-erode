@@ -30,8 +30,8 @@ const Footer = () => {
             <div className="footer-info-col">
               <h4>{t('footer.contactTitle')}</h4>
               <p><span className="material-symbols-outlined footer-icon">location_on</span> Thirumagal Kalyan Store, Kavundapadi Main Road, Kalingarayanpalayam, Bhavani, Erode – 638301</p>
-              <p><span className="material-symbols-outlined footer-icon">call</span> {t('contact.form.phone')} 1: +91 98429 30758</p>
-              <p><span className="material-symbols-outlined footer-icon">call</span> {t('contact.form.phone')} 2: +91 94887 30758</p>
+              <p><span className="material-symbols-outlined footer-icon">call</span> {t('contact.form.phone')} 1: +91 94887 30758</p>
+              <p><span className="material-symbols-outlined footer-icon">call</span> {t('contact.form.phone')} 2: +91 98429 30758</p>
             </div>
             
             <div className="footer-links-col">

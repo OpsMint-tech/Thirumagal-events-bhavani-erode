@@ -3,7 +3,7 @@
  * Uses the direct protocol for mobile/desktop apps and falls back to web.
  */
 export const openWhatsApp = (message = '') => {
-  const phone = '919842930758';
+  const phone = '919488730758';
   const encodedText = encodeURIComponent(message);
   
   const protocolUrl = `whatsapp://send?phone=${phone}&text=${encodedText}`;

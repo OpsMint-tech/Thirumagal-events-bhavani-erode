@@ -82,7 +82,7 @@ export const translations = {
       title: "Frequently Asked Questions",
       list: {
         q1: { q: "Do you offer wedding decoration in Bhavani?", a: "Yes, we serve Bhavani, Komarapalayam, Anthiyur, Gobichettipalayam and all of Erode District. We are conveniently located in Bhavani to serve the local community since 1991." },
-        q2: { q: "What is the cost of wedding decoration in Erode?", a: "Our pricing is fully customised to your specific requirements, venue size, and budget. We offer premium decoration for every scale. Call +91 98429 30758 for a free consultations and a detailed quote." },
+        q2: { q: "What is the cost of wedding decoration in Erode?", a: "Our pricing is fully customised to your specific requirements, venue size, and budget. We offer premium decoration for every scale. Call +91 94887 30758 for a free consultations and a detailed quote." },
         q3: { q: "Do you handle corporate events?", a: "Yes, we handle corporate events across Erode and Coimbatore. Our services include professional stage setup, branding backdrops, floral arrangements, and complete venue transformation for seminars, galas, and product launches." },
         q4: { q: "How many years of experience do you have?", a: "We have over 35+ years of experience in the event decoration industry. Established in 1991, we have successfully delivered thousands of weddings, receptions, and corporate events with a legacy of trust." }
       }
@@ -109,6 +109,7 @@ export const translations = {
         whatsapp: "WhatsApp",
         visit: "Visit Our Office",
         chat: "Chat on WhatsApp",
+        whatsappDefault: "Hello! I am interested in your decoration services. Please provide more information.",
         getDirections: "Get Directions",
         successTitle: "Thank You!",
         successMsg: "Your enquiry has been sent. Opening WhatsApp for chat..."
@@ -245,7 +246,7 @@ export const translations = {
       title: "அடிக்கடி கேட்கப்படும் கேள்விகள்",
       list: {
         q1: { q: "பவானியில் திருமண அலங்காரச் சேவை வழங்குகிறீர்களா?", a: "ஆம், பவானி, குமாரபாளையம், அந்தியூர், கோபிசெட்டிபாளையம் மற்றும் ஈரோடு மாவட்டம் முழுவதும் சேவை செய்கிறோம். 1991 முதல் உள்ளூர் மக்களுக்கு சேவை செய்ய பவானியில் வசதியாக இருக்கிறோம்." },
-        q2: { q: "ஈரோட்டில் திருமண அலங்காரத்திற்கு எவ்வளவு செலவாகும்?", a: "எங்கள் விலை உங்கள் குறிப்பிட்ட தேவைகள், இடத்தின் அளவு மற்றும் பட்ஜெட்டுக்கு ஏற்ப அமைக்கப்படுகிறது. எல்லா நிலைகளுக்கும் பிரீமியம் அலங்காரத்தை வழங்குகிறோம். இலவச ஆலோசனைக்கு +91 98429 30758 ஐ அழைக்கவும்." },
+        q2: { q: "ஈரோட்டில் திருமண அலங்காரத்திற்கு எவ்வளவு செலவாகும்?", a: "எங்கள் விலை உங்கள் குறிப்பிட்ட தேவைகள், இடத்தின் அளவு மற்றும் பட்ஜெட்டுக்கு ஏற்ப அமைக்கப்படுகிறது. எல்லா நிலைகளுக்கும் பிரீமியம் அலங்காரத்தை வழங்குகிறோம். இலவச ஆலோசனைக்கு +91 94887 30758 ஐ அழைக்கவும்." },
         q3: { q: "கார்ப்பரேட் நிகழ்வுகளைக் கையாளுவீர்களா?", a: "ஆம், ஈரோடு மற்றும் கோயம்புத்தூர் முழுவதும் கார்ப்பரேட் நிகழ்வுகளைக் கையாளுகிறோம். தொழில்முறை மேடை அமைப்பு, பிராண்டிங் பின்னணிகள் மற்றும் மலர் ஏற்பாடுகள் ஆகியவையும் இதில் அடங்கும்." },
         q4: { q: "உங்களுக்கு எத்தனை வருட அனுபவம் உள்ளது?", a: "நிகழ்வு அலங்காரத் துறையில் 35+ ஆண்டுகளுக்கும் மேலான அனுபவம் எங்களிடம் உள்ளது. 1991-ல் நிறுவப்பட்ட நாங்கள், ஆயிரக்கணக்கான நிகழ்ச்சிகளை நம்பிக்கையுடனும் பாரம்பரியத்துடனும் வழங்கியுள்ளோம்." }
       }
@@ -272,6 +273,7 @@ export const translations = {
         whatsapp: "வாட்ஸ்அப்",
         visit: "எங்கள் அலுவலகம்",
         chat: "வாட்ஸ்அப்பில் சாட் செய்ய",
+        whatsappDefault: "வணக்கம்! உங்கள் அலங்காரச் சேவைகளில் நான் ஆர்வமாக உள்ளேன். கூடுதல் விவரங்களை வழங்கவும்.",
         getDirections: "திசை அறிக்கை",
         successTitle: "மிக்க நன்றி!",
         successMsg: "உங்கள் விசாரணை அனுப்பப்பட்டது. வாட்ஸ்அப் பக்கம் திறக்கப்படும்..."

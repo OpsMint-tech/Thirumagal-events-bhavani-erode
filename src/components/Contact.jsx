@@ -171,8 +171,8 @@ const Contact = () => {
                 <span className="material-symbols-outlined">call</span>
                 <div className="info-details">
                   <h4>{t('contact.info.call')}</h4>
-                  <a href="tel:+919842930758">+91 98429 30758</a>
                   <a href="tel:+919488730758">+91 94887 30758</a>
+                  <a href="tel:+919842930758">+91 98429 30758</a>
                 </div>
               </div>
               
@@ -181,7 +181,7 @@ const Contact = () => {
                 <div className="info-details">
                   <h4>{t('contact.info.whatsapp')}</h4>
                   <button 
-                    onClick={() => openWhatsApp()} 
+                    onClick={() => openWhatsApp(t('contact.info.whatsappDefault'))} 
                     className="info-link-btn"
                   >
                     {t('contact.info.chat')}

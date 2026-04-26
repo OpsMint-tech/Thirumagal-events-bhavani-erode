@@ -16,7 +16,7 @@ const Hero = () => {
           {t('hero.subtext')}
         </p>
         <div className="hero-actions fade-in" style={{ animationDelay: '0.6s' }}>
-          <a href="tel:+919842930758" className="btn btn-hero btn-primary-hero shimmer-btn">
+          <a href="tel:+919488730758" className="btn btn-hero btn-primary-hero shimmer-btn">
             <span className="material-symbols-outlined" style={{ marginRight: '10px', fontSize: '20px' }}>call</span>
             {t('hero.ctaCall')}
           </a>
